@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import './index.html';
 import './style.css';
-import 'db.js';
+import './db.js';
 
 render(
   <>
