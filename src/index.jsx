@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import './index.html';
 import './style.css';
 import './db.js';
+import './pages/list/index.html';
 
 render(
   <>
