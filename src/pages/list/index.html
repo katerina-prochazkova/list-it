@@ -14,6 +14,7 @@
     <header>
       <div class="navigation-container">
         <button id="nav-btn" class="nav-btn"></button>
+        <h3>List it!</h3>
         <nav class="nav-closed">
           <a id=" domu-btn" class="nav-polozky" href="index.html">Úvodní stránka</a>
           <a id="seznamy-btn" class="nav-polozky" href="">Moje seznamy</a>
@@ -24,48 +25,53 @@
     </div>
   </header>
     <main>
-      <h3>List it!</h3>
-      <h1>Název seznamu</h1>
-      <div>
-        <form>
-          <div>
+      <div class="seznam-container">
+      
+      <h2>Název seznamu</h2>
+        <form class="form-list">
+          <div class="new-input">
+            <input class="input" type="text" placeholder="  Nová položka" /><br />
+            <input class="input" type="text" placeholder="  Množství (volitelné)" /><br />
+          </div>
+          <div class="kategorie-ikonky">
             kategorie ikonky
+            <img class="ikonky-volba" src="ikonka" />
+            <img class="ikonky-volba" src="ikonka" />
+            <img class="ikonky-volba" src="ikonka" />
+            <img class="ikonky-volba" src="ikonka" />
             <!-- tady by mohly být ikonky pro kategorie (nebo dropdown select) -->
           </div>
-          <input type="text" placeholder="Nová položka" /><br />
-          <input type="text" placeholder="Množství (volitelné)" /><br />
-          <button type="submit">Přidat</button>
-          <!-- button disabled když bude políčko pro novou položku prázdné -->
+          <button class="btn-add-item" type="submit">přidat</button> <!-- tady bude ikonka zelené kolečko s pluskem-->
+          
         </form>
-
+        <div class="kategorie-container">
+          <div class="kategorie-list">
+          <input class="input-checkbox-ktg" type="checkbox" />
+          <button class="btn-kategorie"><img src="ikonka" />   tohle bude kategorie</button>
+          <img class="ikonka-delete" src="ikonka-delete" />
+<!-- na klik rozbalí a zabalí ten ul-->
+</div>
         <ul class="list">
-          <li class="list-item">
-            <input type="checkbox" />Položka 1ks <img src="ikonka" /><button>
-              Smazat
-            </button>
+          <li class="list-item"> <div>
+            <input class="input-checkbox" type="checkbox" />   <img src="ikonka" />   Položka..... 1ks </div> <img class="ikonka-delete" src="ikonka-delete" />
           </li>
-          <li class="list-item">
-            <input type="checkbox" />Položka 1ks <img src="ikonka" /><button>
-              Smazat
-            </button>
+          <li class="list-item"> <div>
+            <input class="input-checkbox" type="checkbox" />   <img src="ikonka" />   Položka..... 1ks </div> <img class="ikonka-delete" src="ikonka-delete" />
           </li>
-          <li class="list-item">
-            <input type="checkbox" />Položka 1ks <img src="ikonka" /><button>
-              Smazat
-            </button>
+          <li class="list-item"> <div>
+            <input class="input-checkbox" type="checkbox" />   <img src="ikonka" />   Položka..... 1ks </div> <img class="ikonka-delete" src="ikonka-delete" />
           </li>
-          <li class="list-item">
-            <input type="checkbox" />Položka 1ks <img src="ikonka" /><button>
-              Smazat
-            </button>
+          <li class="list-item"> <div>
+            <input class="input-checkbox" type="checkbox" />   <img src="ikonka" />   Položka..... 1ks </div> <img class="ikonka-delete" src="ikonka-delete" />
           </li>
-          <li class="list-item">
-            <input type="checkbox" />Položka 1ks <img src="ikonka" /><button>
-              Smazat
-            </button>
+          <li class="list-item"> <div>
+            <input class="input-checkbox" type="checkbox" />   <img src="ikonka" />   Položka..... 1ks </div> <img class="ikonka-delete" src="ikonka-delete" />
           </li>
         </ul>
       </div>
+      </div>
     </main>
+    <footer>KPKP 2020</footer>
+
   </body>
 </html>

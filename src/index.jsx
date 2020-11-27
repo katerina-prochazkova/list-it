@@ -3,12 +3,11 @@ import { render } from 'react-dom';
 import './index.html';
 import './style.css';
 import './db.js';
-import './pages/list/index.html';
 
 render(
   <>
     <header>
-      <h1>Sdílený seznam</h1>
+      <h2 class="nazev-seznamu">Sdílený seznam</h2>
     </header>
     <main>
       <p>tady bude sdílený seznam Tinky a Kačky</p>
