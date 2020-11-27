@@ -1,3 +1,18 @@
+/* style info
+COLOURS:
+light green: #dbf9b8
+green: #006613
+pink/red: #ff5f55
+  alternative 1: #f82f36  
+  alternative 2: #FF3526
+white: #ffffff
+black: #000000
+
+FONTS:
+
+
+*/
+
 *,
 *::before,
 *::after {
@@ -7,21 +22,33 @@
 body {
   font-family: 'Jost', sans-serif;
   font-size: 16px;
+  background-color: #e9ffdb;
+  height: 100vh;
+  margin: 0;
+}
+
+/* HEADER */
+header {
+  height: 10%;
+  display: none;
+}
+
+/* MAIN */
+main {
+  height: 80%;
+  margin: 0;
+  margin-top: 0;
 }
 h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 38px;
   text-align: center;
   color: #006613;
+  margin: 30px 0;
 }
 
-main {
-  background-color: #e9ffdb;
-  padding: 10px 25px;
-}
-
-.content {
-  position: relative;
+p {
+  margin: 30px 0;
 }
 .new-list {
   display: flex;
@@ -40,7 +67,23 @@ main {
   padding: 12px 28px;
   border-radius: 30px;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin: 20px 0;
+}
+.new-list--button:hover,
+.new-list--button:focus {
+  background-color: #f82f36;
+}
+
+.new-list--button--selected {
+  border: 2px solid #fe5f55;
+  color: #fe5f55;
+  background-color: white;
+}
+.new-list--intro {
+  color: grey;
+}
+.new-list--type {
+  list-style-type: none;
 }
 
 .new-list--name {
@@ -49,15 +92,12 @@ main {
   font-family: 'Jost', sans-serif;
   font-size: 16px;
   background-color: inherit;
-  margin-top: 10px;
+  margin-top: 25px;
   padding-bottom: 10px;
 }
 
-.new-list--type {
-  list-style-type: none;
-}
 .create-list {
-  border: 1px solid #fe5f55;
+  border: 2px solid #fe5f55;
   color: #fe5f55;
   background-color: white;
   font-family: 'Jost', sans-serif;
@@ -69,26 +109,56 @@ main {
   cursor: pointer;
 }
 
-.about {
-  display: inline-block;
-  padding: 20px;
-  text-decoration: none;
-  background-color: black;
-  color: #e9ffdb;
-  text-align: center;
-  border-radius: 50%;
-  position: absolute;
-  margin-left: 95%;
-  margin-top: -70%;
-
-  /* to absolutní pozicování moc neumím :D není to hezky respozivní */
+.create-list:hover,
+.create-list:focus {
+  border: 2px solid #f82f36;
+  color: #f82f36;
+  font-size: 15px;
+  margin-left: 14px;
+}
+.about-btn {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin: 35px 0;
 }
 
+.about {
+  width: 100px;
+  height: 100px;
+  padding: 35px 10px;
+  text-decoration: none;
+  /* background-color: #268037; */
+  background-color: #006613;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 50%;
+  /* tady bych ráda otočila text o -30°*/
+}
+
+.about:hover,
+.about:focus {
+  background-color: #007315;
+}
+
+/*FOOTER*/
+footer {
+  height: 5%;
+  text-align: center;
+}
+
+/* STŘEDNÍ ROZLIŠENÍ */
 @media screen and (min-width: 980px) {
+  /* HEADER */
+  header {
+    display: inline-block;
+  }
+
+  /*MAIN*/
+
   main {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
   }
 }

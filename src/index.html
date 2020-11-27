@@ -12,6 +12,20 @@
     <title>Sdílený seznam</title>
   </head>
   <body>
+    <header>
+      <div class="topbar container">
+        <div class="site-logo"></div>
+        <div class="navigation">
+          <button id="nav-btn" class="nav-btn"></button>
+          <nav class="nav-closed">
+            <a id=" domu-btn" class="nav-polozky" href="">Úvodní stránka</a>
+            <a id="seznamy-btn" class="nav-polozky" href="">Moje seznamy</a>
+            <a id="tento-btn" class="nav-polozky" href="">Tento seznam</a>
+            <a id="app-btn" class="nav-polozky" href="">O aplikaci</a>
+          </nav>
+        </div>
+      </div>
+    </header>
     <main>
       <h1>List it!</h1>
       <div class="content">
@@ -22,9 +36,11 @@
           sdílejte, co je už koupeno či hotovo a co naopak ještě chybí.
         </p>
         <div class="new-list">
-          <button class="new-list--button">Chci seznam</button>
+          <button class="new-list--button">Chci nový seznam</button>
+          <!-- ternární operátor bude na klik měnit popisek tlačítka z "Chci nový seznam" na "Můj seznam bude..." a taky změní třídu na na "new-list--button--selected" -->
           <form class="new-list--form">
             <!-- na třídě formuláře pak bude ternární operátor zobrazující třídu podle stavu tlačítka  -->
+            <label class="new-list--intro">Bude to seznam...</label>
             <li class="new-list--type">
               <label for="shop"
                 ><input type="radio" id="shop" name="list" /> Nákupní</label
@@ -44,16 +60,19 @@
             <li class="new-list--type">
               <input
                 type="text"
-                placeholder="Název..."
+                placeholder="... a bude se jmenovat"
                 class="new-list--name"
               />
               <button type="submit" class="create-list">Vytvořit</button>
             </li>
           </form>
         </div>
-        <a href="about.html" class="about">O aplikaci</a>
+        <div class="about-btn">
+          <a href="about.html" class="about">O aplikaci</a>
+        </div>
       </div>
     </main>
+    <footer>KPKP 2020</footer>
     <script src="/bundle.js"></script>
   </body>
 </html>
