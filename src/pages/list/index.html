@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="pages/list/style.css" />
+    <title>Nový seznam</title>
+  </head>
+  <body>
+    <main>
+      <h3>List it!</h3>
+      <h1>Název seznamu</h1>
+      <div>
+        <form>
+          <div>
+            kategorie ikonky
+            <!-- tady by mohly být ikonky pro kategorie (nebo dropdown select) -->
+          </div>
+          <input type="text" placeholder="Nová položka" /><br />
+          <input type="text" placeholder="Množství (volitelné)" /><br />
+          <button type="submit">Přidat</button>
+          <!-- button disabled když bude políčko pro novou položku prázdné -->
+        </form>
+
+        <ul class="list">
+          <li class="list-item">
+            <input type="checkbox" />Položka 1ks <img src="ikonka" /><button>
+              Smazat
+            </button>
+          </li>
+          <li class="list-item">
+            <input type="checkbox" />Položka 1ks <img src="ikonka" /><button>
+              Smazat
+            </button>
+          </li>
+          <li class="list-item">
+            <input type="checkbox" />Položka 1ks <img src="ikonka" /><button>
+              Smazat
+            </button>
+          </li>
+          <li class="list-item">
+            <input type="checkbox" />Položka 1ks <img src="ikonka" /><button>
+              Smazat
+            </button>
+          </li>
+          <li class="list-item">
+            <input type="checkbox" />Položka 1ks <img src="ikonka" /><button>
+              Smazat
+            </button>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
