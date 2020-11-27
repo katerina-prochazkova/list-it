@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  font-size: 16px;
+}
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 38px;
+  text-align: center;
+  color: #006613;
+}
+
+main {
+  background-color: #e9ffdb;
+  padding: 10px 25px;
+}
+
+.content {
+  position: relative;
+}
+.new-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-list--button {
+  border: none;
+  text-decoration: none;
+  color: white;
+  background-color: #fe5f55;
+  font-family: 'Jost', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.new-list--name {
+  border: none;
+  border-bottom: 1px solid #006613;
+  font-family: 'Jost', sans-serif;
+  font-size: 16px;
+  background-color: inherit;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.new-list--type {
+  list-style-type: none;
+}
+.create-list {
+  border: 1px solid #fe5f55;
+  color: #fe5f55;
+  background-color: white;
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 30px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.about {
+  display: inline-block;
+  padding: 20px;
+  text-decoration: none;
+  background-color: black;
+  color: #e9ffdb;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 95%;
+  margin-top: -70%;
+
+  /* to absolutní pozicování moc neumím :D není to hezky respozivní */
+}
+
+@media screen and (min-width: 980px) {
+  main {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+  }
+}

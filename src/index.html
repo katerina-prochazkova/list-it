@@ -3,10 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Náš sdílený seznam</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sdílený seznam</title>
   </head>
   <body>
-    <div id="app"></div>
+    <main>
+      <h1>List it!</h1>
+      <div class="content">
+        <p>
+          Aplikace List vám usnadní domluvu s rodinou a přáteli. Co je potřeba
+          koupit domů k večeři či zabalit na víkend pod stan? Vytvořte si
+          seznam, ke kterému budou mít přístup ostatní uživatelé a společně
+          sdílejte, co je už koupeno či hotovo a co naopak ještě chybí.
+        </p>
+        <div class="new-list">
+          <button class="new-list--button">Chci seznam</button>
+          <form class="new-list--form">
+            <!-- na třídě formuláře pak bude ternární operátor zobrazující třídu podle stavu tlačítka  -->
+            <li class="new-list--type">
+              <label for="shop"
+                ><input type="radio" id="shop" name="list" /> Nákupní</label
+              >
+            </li>
+            <li class="new-list--type">
+              <label for="travel">
+                <input type="radio" id="travel" name="list" /> Cestovní</label
+              >
+            </li>
+            <li class="new-list--type">
+              <label for="wish"
+                ><input type="radio" id="wish" name="list" /> Přání</label
+              >
+            </li>
+
+            <li class="new-list--type">
+              <input
+                type="text"
+                placeholder="Název..."
+                class="new-list--name"
+              />
+              <button type="submit" class="create-list">Vytvořit</button>
+            </li>
+          </form>
+        </div>
+        <a href="about.html" class="about">O aplikaci</a>
+      </div>
+    </main>
     <script src="/bundle.js"></script>
   </body>
 </html>
