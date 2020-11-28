@@ -6,7 +6,8 @@ import './db.js';
 import About from './pages/about/about.jsx';
 import { List } from './pages/list/index.jsx';
 import { Home } from './pages/home/home.jsx';
-import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Menu from './pages/Menu/index.jsx';
+import { HashRouter as Router } from 'react-router-dom';
 
 const routes = [
   { component: Home, path: '/', exact: true },
@@ -14,35 +15,15 @@ const routes = [
   { component: List, path: '/list/:id?' },
 ];
 
-render(
-  <>
-    <Router>
-      <header>
-        <h1>Sdílený seznam</h1>
-        <ul>
-          <li>
-            <Link to="/">Úvodní stránka</Link>
-          </li>
-          <li>
-            <Link to="/about">O aplikaci</Link>
-          </li>
-          <li>
-            <Link to="/list">Seznam</Link>
-          </li>
-        </ul>
+const App = () => {
+  return (
+    <>
+      <Router>
+        <Menu />
+        <footer>KPKP 2020</footer>
+      </Router>
+    </>
+  );
+};
 
-        <Switch>
-          {routes.map((route) => (
-            <Route {...route} key={route.path} />
-          ))}
-          ;
-        </Switch>
-      </header>
-      <main>
-        <p>Zkušební napojení seznamu</p>
-      </main>
-      <footer>KPKP 2020</footer>
-    </Router>
-  </>,
-  document.querySelector('#app'),
-);
+render(<App />, document.querySelector('#app'));
