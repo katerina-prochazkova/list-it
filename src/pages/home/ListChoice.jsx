@@ -13,14 +13,32 @@ const ListChoice = () => {
       .add({ nazev: listName, typ: listType })
       .then((doc) => {
         const category = doc.collection('kategorie');
-        if (listType === 'shop') {
+        if (listType === 'shop' || listType === 'travel') {
           category.add({
-            nazev: 'jídlo',
-            ikona: '',
+            nazev: 'lékárna',
+            ikona: 'bandaid',
+            poradi: 3,
+          });
+          category.add({
+            nazev: 'drogerie',
+            ikona: 'toiletpaper',
+            poradi: 2,
           });
           category.add({
             nazev: 'nápoje',
             ikona: 'bottle',
+            poradi: 1,
+          });
+          category.add({
+            nazev: 'jídlo',
+            ikona: 'plate',
+            poradi: 0,
+          });
+        } else if (listType === 'wish') {
+          category.add({
+            nazev: 'dárky',
+            ikona: 'gift',
+            poradi: 0,
           });
         }
         history.push(`/list/${doc.id}`);
