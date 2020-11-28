@@ -10,6 +10,7 @@ export const ListCategory = (props) => {
       .collection('seznamy')
       .doc(props.id)
       .collection('kategorie')
+      .orderBy('poradi')
       .onSnapshot((querySnapshot) => {
         setCategories(
           querySnapshot.docs.map((doc) => {
@@ -21,7 +22,12 @@ export const ListCategory = (props) => {
       });
   }, [props.id]);
 
-  return categories.map((category) => (
-    <Category key={category.id} {...category} listId={props.id} />
-  ));
+  return (
+    <>
+      {' '}
+      {categories.map((category) => (
+        <Category key={category.id} {...category} listId={props.id} />
+      ))}
+    </>
+  );
 };
