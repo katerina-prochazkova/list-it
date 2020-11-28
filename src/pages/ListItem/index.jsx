@@ -4,9 +4,8 @@ export const ListItem = (props) => {
   return (
     <li className="list-item">
       <div>
-        <input className="input-checkbox" type="checkbox" />{' '}
-        <img src="ikonka" />
-        {props.nazev} {props.mnozstvi}
+        <input className="input-checkbox" type="checkbox" /> {props.nazev}{' '}
+        {props.mnozstvi}
       </div>
       <img className="ikonka-delete" src="ikonka-delete" />
     </li>

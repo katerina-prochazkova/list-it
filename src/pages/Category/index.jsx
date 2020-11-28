@@ -33,10 +33,14 @@ export const Category = (props) => {
       <div className="kategorie-list">
         <input className="input-checkbox-ktg" type="checkbox" />
         <button className="btn-kategorie" onClick={handleClick}>
-          <img src="ikonka" /> {props.nazev}
-          <img src="ikonka" />
+          <img
+            className="ikonka-kategorie"
+            src={`/assets/${props.ikona}.svg`}
+          />{' '}
+          {props.nazev}
+          <div className={active ? 'ikonka-sbal' : 'ikonka-rozbal'} />
         </button>
-        <img className="ikonka-delete" src="ikonka-delete" />
+        <button id="ikn-dlt" className="ikonka-delete"></button>
       </div>
       {active ? (
         <ul className="list">

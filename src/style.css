@@ -326,10 +326,12 @@ form .input {
 }
 
 .input-checkbox-ktg {
-  width: 25px;
-  height: 25px;
-  margin-top: auto;
-  margin-bottom: auto;
+  width: 24px;
+  height: 24px;
+  margin: 10px;
+}
+.input-checkbox-ktg:hover {
+  transform: scale(1.1);
 }
 
 .btn-kategorie {
@@ -344,13 +346,41 @@ form .input {
   font-size: 18px;
   cursor: pointer;
   outline: none;
+  display: flex;
+  align-items: center;
 }
 .btn-kategorie:hover,
 .btn-kategorie:focus {
   background-color: #f82f36;
+  transform: scale(1.01);
+}
+
+.ikonka-kategorie {
+  width: 33px;
+  height: 33px;
+  margin: 0 5px;
+}
+
+.ikonka-rozbal {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 0 15px 0 auto;
+  background-image: url('./img/down.svg');
+  border: none;
+}
+
+.ikonka-sbal {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 0 15px 0 auto;
+  background-image: url('./img/up.svg');
+  border: none;
 }
 
 .ikonka-delete {
+  background-color: transparent;
   width: 33px;
   height: auto;
   margin: 0 5px;
@@ -360,13 +390,12 @@ form .input {
   outline: none;
   border: none;
   cursor: pointer;
-  background-color: none;
 }
 
 .ikonka-delete:hover,
 .ikonka-delete:focus {
   /* background-color: #f82f36; */
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 ul {
@@ -381,6 +410,8 @@ ul {
   justify-content: space-between;
   font-family: 'Jost', sans-serif;
   font-size: 18px;
+  background-color: #e9ffdb;
+  /* light green: #dbf9b8 */
 }
 
 /*-----STŘEDNÍ ROZLIŠENÍ od 720px -----*/
