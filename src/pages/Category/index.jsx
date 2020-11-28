@@ -41,7 +41,12 @@ export const Category = (props) => {
       {active ? (
         <ul className="list">
           {items.map((item) => (
-            <ListItem key={item.id} {...item} />
+            <ListItem
+              key={item.id}
+              {...item}
+              catId={props.id}
+              listId={props.listId}
+            />
           ))}
         </ul>
       ) : null}
