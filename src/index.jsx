@@ -7,7 +7,7 @@ import About from './pages/about/about.jsx';
 import { List } from './pages/list/index.jsx';
 import { Home } from './pages/home/home.jsx';
 import Menu from './pages/Menu/index.jsx';
-import { HashRouter as Router } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 const routes = [
   { component: Home, path: '/', exact: true },
@@ -20,6 +20,12 @@ const App = () => {
     <>
       <Router>
         <Menu />
+        <Switch>
+          {routes.map((route) => (
+            <Route {...route} key={route.path} />
+          ))}
+          ;
+        </Switch>
         <footer>KPKP 2020</footer>
       </Router>
     </>

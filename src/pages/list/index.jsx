@@ -1,17 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { render } from 'react-dom';
+import { useParams } from 'react-router-dom';
+import { db } from '../../db.js';
 import { ListCategory } from '../ListCategory/index.jsx';
 import { NewItemForm } from '../NewItemForm/index.jsx';
 
 export const List = (props) => {
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   setItemName('');
-  //   setItemAmount('');
-  // };
+  const { id } = useParams();
+  const [seznam, setSeznam] = useState(null);
+  console.log(seznam);
+
+  useEffect(() => {
+    return db
+      .collection('seznamy')
+      .doc(id)
+      .onSnapshot(function (doc) {
+        setSeznam(doc.data());
+      });
+  }, [id]);
 
   return (
     <>
+      <p>Id: {id}</p>
       <header>
         <div className="navigation-container">
           <button id="nav-btn" className="nav-btn"></button>
@@ -29,14 +39,16 @@ export const List = (props) => {
           </nav>
         </div>
       </header>
-      <main className="list-main">
-        <div className="seznam-container">
-          <h2>Název seznamu</h2>
+      {seznam === null ? null : (
+        <main className="list-main">
+          <div className="seznam-container">
+            <h2>{seznam.nazev}</h2>
 
-          <NewItemForm />
-          <ListCategory />
-        </div>
-      </main>
+            <NewItemForm />
+            <ListCategory id={id} />
+          </div>
+        </main>
+      )}
     </>
   );
 };
