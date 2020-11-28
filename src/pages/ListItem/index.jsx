@@ -27,7 +27,20 @@ export const ListItem = (props) => {
         <div>{props.nazev}</div>
         <span class="vypln" />
         <div> {props.mnozstvi}</div>
-        <button id="ikn-dlt" className="ikonka-delete"></button>
+        <button
+          id="ikn-dlt"
+          className="ikonka-delete"
+          onClick={() =>
+            db
+              .collection('seznamy')
+              .doc(props.listId)
+              .collection('kategorie')
+              .doc(props.catId)
+              .collection('polozky')
+              .doc(props.id)
+              .delete()
+          }
+        ></button>
       </li>
     </div>
   );

@@ -51,8 +51,7 @@ header {
   background-color: #e9ffdb;
 }
 
-.nav-btn:hover,
-.nav-btn:focus {
+.nav-btn:hover {
   background-color: #dbf9b8;
 }
 
@@ -96,9 +95,9 @@ p {
   border-radius: 30px;
   cursor: pointer;
   margin: 20px 0;
+  outline: none;
 }
-.new-list--button:hover,
-.new-list--button:focus {
+.new-list--button:hover {
   background-color: #f82f36;
   transform: scale(1.1);
 }
@@ -107,6 +106,7 @@ p {
   border: 2px solid #fe5f55;
   color: #fe5f55;
   background-color: white;
+  outline: none;
 }
 .new-list--intro {
   color: grey;
@@ -123,6 +123,7 @@ p {
   background-color: inherit;
   margin: 25px 20px 0 0;
   padding-bottom: 10px;
+  outline: none;
 }
 
 .create-list {
@@ -135,10 +136,10 @@ p {
   padding: 10px 22px;
   border-radius: 30px;
   cursor: pointer;
+  outline: none;
 }
 
-.create-list:hover,
-.create-list:focus {
+.create-list:hover {
   border: 2px solid #f82f36;
   color: #f82f36;
   transform: scale(1.1);
@@ -162,8 +163,7 @@ p {
   /* tady bych ráda otočila text o -30°*/
 }
 
-.about:hover,
-.about:focus {
+.about:hover {
   background-color: #007315;
   transform: scale(1.1);
 }
@@ -207,8 +207,7 @@ footer {
     padding: 10px;
     color: #006613;
   }
-  .nav-polozky:hover,
-  .nav-polozky:focus {
+  .nav-polozky:hover {
     color: #007315;
     background-color: #dbf9b8;
     font-size: 18px;
@@ -323,8 +322,7 @@ form .input {
   background-image: url('img/plus.svg');
 }
 
-.btn-add-item:hover,
-.btn-add-item:focus {
+.btn-add-item:hover {
   background-color: #007315;
   transform: scale(1.1);
 }
@@ -344,8 +342,7 @@ form .input {
   height: 24px;
   margin: 10px;
 }
-.input-checkbox-ktg:hover,
-.input-checkbox-ktg:focus {
+.input-checkbox-ktg:hover {
   transform: scale(1.1);
 }
 
@@ -406,8 +403,7 @@ form .input {
   cursor: pointer;
 }
 
-.ikonka-delete:hover,
-.ikonka-delete:focus {
+.ikonka-delete:hover {
   /* background-color: #f82f36; */
   transform: scale(1.2);
 }
@@ -426,8 +422,7 @@ ul {
   margin-bottom: 0;
   margin-right: 30px;
 }
-.input-checkbox-item:hover,
-.input-checkbox-item:focus {
+.input-checkbox-item:hover {
   transform: scale(1.1);
 }
 
