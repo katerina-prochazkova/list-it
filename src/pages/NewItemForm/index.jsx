@@ -1,11 +1,23 @@
 import React, { useState } from 'react';
+import { db } from '../../db';
 
-export const NewItemForm = () => {
+export const NewItemForm = (props) => {
   const [itemName, setItemName] = useState('');
   const [itemAmount, setItemAmount] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    db.collection('seznamy')
+      .doc(props.listId)
+      .collection('kategorie')
+      .doc('tPpwuMyS1IyZJr0HcRSh')
+      .collection('polozky')
+      .add({
+        nazev: itemName,
+        mnozstvi: itemAmount,
+        koupeno: false,
+        // datumVytvoreni: firebase.firestore.FieldValue.serverTimestamp(),
+      });
     setItemName('');
     setItemAmount('');
   };
