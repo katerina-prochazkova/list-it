@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
 
 export default function About() {
   return (
     <>
       <header>
         <div class="navigation-container">
-          <button id="nav-btn" class="nav-btn"></button>
+          <button id="nav-btn" class="nav-btn">
+            {/* <img src={'img/hamburger.svg'} /> */}
+          </button>
           <h3>List it!</h3>
           <nav class="nav-closed">
             <a id=" domu-btn" class="nav-polozky" href="index.html">
@@ -15,14 +16,10 @@ export default function About() {
             <a id="seznamy-btn" class="nav-polozky" href="">
               Moje seznamy
             </a>
-            <a id="app-btn" class="nav-polozky" href="about.html">
-              O aplikaci
-            </a>
           </nav>
         </div>
       </header>
       <main class="about-main">
-        <h3>List it!</h3>
         <h1>Jak to funguje</h1>
         <div>
           <p>

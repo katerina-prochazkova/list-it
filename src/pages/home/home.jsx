@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ListChoice from './ListChoice.jsx';
 
 export function Home() {
@@ -11,15 +11,15 @@ export function Home() {
         <div className="navigation-container">
           <button id="nav-btn" className="nav-btn"></button>
           <nav className="nav-closed">
-            <a id=" domu-btn" className="nav-polozky" href="#header">
+            <Link to="/" id="home-btn" className="nav-polozky">
               Úvodní stránka
-            </a>
-            <a id="seznamy-btn" className="nav-polozky" href="">
+            </Link>
+            <Link to="/list/66" id="seznamy-btn" className="nav-polozky">
               Moje seznamy
-            </a>
-            <a id="app-btn" className="nav-polozky" href="">
+            </Link>
+            <Link to="/about" id="app-btn" className="nav-polozky">
               O aplikaci
-            </a>
+            </Link>
           </nav>
         </div>
       </header>
@@ -46,9 +46,9 @@ export function Home() {
             <div>{newList ? <ListChoice /> : ''}</div>
           </div>
           <div className="about-btn">
-            <a href="about.html" className="about">
+            <Link to="/about" className="about">
               O aplikaci
-            </a>
+            </Link>
           </div>
         </div>
       </main>

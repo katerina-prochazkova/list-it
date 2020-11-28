@@ -1,7 +1,9 @@
 /* style info
 
 COLOURS:
+background green: #e9ffdb
 light green: #dbf9b8
+
 green: #006613
 pink/red: #ff5f55
   alternative 1: #f82f36  
@@ -33,8 +35,25 @@ body {
 header {
   height: 10%;
 }
+
 .nav-btn {
-  /*background-image: ; doplnit hamburger ikonu*/
+  margin: 30px;
+  margin-left: 40px;
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  background-image: url('./img/hamburger.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #e9ffdb;
+}
+
+.nav-btn:hover,
+.nav-btn:focus {
+  background-color: #dbf9b8;
 }
 
 .nav-closed {
@@ -210,14 +229,6 @@ footer {
 
 /*-------------------LIST-------------------*/
 
-.nav-btn {
-  margin: 30px;
-  margin-left: 40px;
-  height: 50px;
-  width: 50px;
-  /* background-image: ; HAMBURGER MENU*/
-}
-
 .navigation-container {
   display: flex;
   flex-direction: row;
@@ -248,7 +259,6 @@ h2 {
   color: white;
   background-color: #fe5f55;
   border-radius: 30px;
-  cursor: pointer;
   text-align: center;
 }
 
@@ -267,6 +277,7 @@ form .input {
   width: 85%;
   border: 1px solid #dbf9b8;
   padding: 5px;
+  outline: none;
 }
 
 .kategorie-ikonky {
@@ -294,6 +305,8 @@ form .input {
   position: absolute;
   left: 80%;
   top: 10%;
+  outline: none;
+  cursor: pointer;
 }
 
 .btn-add-item:hover,
@@ -329,6 +342,8 @@ form .input {
   font-family: 'Jost', sans-serif;
   font-weight: 600;
   font-size: 18px;
+  cursor: pointer;
+  outline: none;
 }
 .btn-kategorie:hover,
 .btn-kategorie:focus {
@@ -337,7 +352,21 @@ form .input {
 
 .ikonka-delete {
   width: 33px;
-  height: 33px;
+  height: auto;
+  margin: 0 5px;
+  background-image: url('./img/x-thin.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: none;
+}
+
+.ikonka-delete:hover,
+.ikonka-delete:focus {
+  /* background-color: #f82f36; */
+  transform: scale(1.1);
 }
 
 ul {

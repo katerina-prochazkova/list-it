@@ -215,7 +215,9 @@ footer {
   margin-left: 40px;
   height: 50px;
   width: 50px;
-  /* background-image: ; HAMBURGER MENU*/
+  background-image: url('img/hamburger_bez-okraje.svg');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .navigation-container {
