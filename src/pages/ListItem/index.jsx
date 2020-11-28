@@ -16,19 +16,20 @@ export const ListItem = (props) => {
   };
 
   return (
-    <li className="list-item">
-      <div>
+    <div className="item-line">
+      <li className="list-item">
         <input
-          className="input-checkbox"
+          className="input-checkbox-item"
           type="checkbox"
           onChange={handleChange}
           checked={props.koupeno}
         />{' '}
-        <img src="ikonka" />
-        {props.nazev} {props.mnozstvi}
-      </div>
-      <img className="ikonka-delete" src="ikonka-delete" />
-    </li>
+        <div>{props.nazev}</div>
+        <span class="vypln" />
+        <div> {props.mnozstvi}</div>
+        <button id="ikn-dlt" className="ikonka-delete"></button>
+      </li>
+    </div>
   );
 };
 

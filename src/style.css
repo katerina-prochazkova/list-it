@@ -330,7 +330,8 @@ form .input {
   height: 24px;
   margin: 10px;
 }
-.input-checkbox-ktg:hover {
+.input-checkbox-ktg:hover,
+.input-checkbox-ktg:focus {
   transform: scale(1.1);
 }
 
@@ -349,8 +350,7 @@ form .input {
   display: flex;
   align-items: center;
 }
-.btn-kategorie:hover,
-.btn-kategorie:focus {
+.btn-kategorie:hover {
   background-color: #f82f36;
   transform: scale(1.01);
 }
@@ -382,8 +382,8 @@ form .input {
 .ikonka-delete {
   background-color: transparent;
   width: 33px;
-  height: auto;
-  margin: 0 5px;
+  height: 33px;
+  margin: auto 10px;
   background-image: url('./img/x-thin.svg');
   background-position: center;
   background-repeat: no-repeat;
@@ -399,21 +399,43 @@ form .input {
 }
 
 ul {
+  margin: 0 30px;
   list-style-type: none;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 0;
 }
 
-.list-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: 'Jost', sans-serif;
-  font-size: 18px;
-  background-color: #e9ffdb;
-  /* light green: #dbf9b8 */
+.input-checkbox-item {
+  width: 24px;
+  height: 24px;
+  margin: 10px;
+  margin-bottom: 0;
+  margin-right: 30px;
+}
+.input-checkbox-item:hover,
+.input-checkbox-item:focus {
+  transform: scale(1.1);
 }
 
+.vypln {
+  border-bottom: 1px dotted #000000;
+  flex-grow: 1;
+  margin: 0 6px 5px 6px;
+}
+.list-item {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-family: 'Jost', sans-serif;
+  font-size: 16px;
+  background-color: #e9ffdb;
+  padding-bottom: 8px;
+  margin-top: 5px;
+}
+
+.item-checked {
+  background-color: #dbf9b8;
+}
 /*-----STŘEDNÍ ROZLIŠENÍ od 720px -----*/
 @media screen and (min-width: 720px) {
   .list-main {
