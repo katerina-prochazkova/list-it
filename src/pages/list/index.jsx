@@ -8,6 +8,7 @@ import { NewItemForm } from '../NewItemForm/index.jsx';
 export const List = (props) => {
   const { id } = useParams();
   const [seznam, setSeznam] = useState(null);
+  console.log(seznam);
 
   useEffect(() => {
     return db
