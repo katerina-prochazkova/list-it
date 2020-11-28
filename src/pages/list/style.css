@@ -1,4 +1,5 @@
 /* style info
+
 COLOURS:
 light green: #dbf9b8
 green: #006613
@@ -8,7 +9,7 @@ pink/red: #ff5f55
 white: #ffffff
 black: #000000
 
-FONTS:
+FONTS: 'Jost', sans-serif
 
 
 */
@@ -207,12 +208,7 @@ footer {
 } */
 
 /*-------------------LIST-------------------*/
-.seznam-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-}
+
 .nav-btn {
   margin: 30px;
   margin-left: 40px;
@@ -232,6 +228,13 @@ h3 {
   margin: auto 40px auto auto;
   font-size: 24px;
   display: inline-block;
+}
+
+.seznam-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
 
 h2 {
@@ -276,6 +279,7 @@ form .input {
 .ikonky-volba {
   width: 20%;
 }
+
 .btn-add-item {
   background-color: #006613;
   color: #dbf9b8;
@@ -315,11 +319,19 @@ form .input {
 }
 
 .btn-kategorie {
+  margin: 0 auto;
+  width: 90%;
+  padding: 5px;
   background-color: #fe5f55;
   border: none;
-  padding: 5px;
-  width: 80%;
   text-align: left;
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+.btn-kategorie:hover,
+.btn-kategorie:focus {
+  background-color: #f82f36;
 }
 
 .ikonka-delete {
@@ -333,19 +345,20 @@ ul {
   padding: 0;
 }
 
-/* .input-checkbox {
-  width:
-} */
-
 .list-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: 'Jost', sans-serif;
+  font-size: 18px;
 }
 
-/* -----STŘEDNÍ ROZLIŠENÍ od 720px -----*/
-
+/*-----STŘEDNÍ ROZLIŠENÍ od 720px -----*/
 @media screen and (min-width: 720px) {
-  /* HEADER */
+  .list-main {
+    width: 80%;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
