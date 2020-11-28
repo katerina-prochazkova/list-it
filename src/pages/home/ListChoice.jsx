@@ -12,6 +12,17 @@ const ListChoice = () => {
     db.collection('seznamy')
       .add({ nazev: listName, typ: listType })
       .then((doc) => {
+        const category = doc.collection('kategorie');
+        if (listType === 'shop') {
+          category.add({
+            nazev: 'jídlo',
+            ikona: '',
+          });
+          category.add({
+            nazev: 'nápoje',
+            ikona: 'bottle',
+          });
+        }
         history.push(`/list/${doc.id}`);
       });
 
