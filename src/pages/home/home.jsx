@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import ListChoice from './ListChoice.jsx';
 
-export default function Home() {
+export function Home() {
   const [newList, setNewList] = useState(false);
 
   return (

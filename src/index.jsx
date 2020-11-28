@@ -4,7 +4,7 @@ import './index.html';
 import './db.js';
 // import About from './pages/about/about.jsx';
 // import List from './pages/list/list.jsx';
-import Home from './pages/home/home.jsx';
+import Home from './pages/Home/home.jsx';
 import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 const routes = [
