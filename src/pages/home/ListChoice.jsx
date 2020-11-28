@@ -1,18 +1,34 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { db } from '../../db';
 
 const ListChoice = () => {
   const history = useHistory();
+  const [listType, setListType] = useState('');
+  const [listName, setListName] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // doplnit kód pro firebase
-    history.push(`/list/${66}`);
-    //tady pak upravit 66 dle firebase
+    db.collection('seznamy')
+      .add({ nazev: listName, typ: listType })
+      .then((doc) => {
+        const category = doc.collection('kategorie');
+        if (listType === 'shop') {
+          category.add({
+            nazev: 'jídlo',
+            ikona: '',
+          });
+          category.add({
+            nazev: 'nápoje',
+            ikona: 'bottle',
+          });
+        }
+        history.push(`/list/${doc.id}`);
+      });
+
     console.log('list type je nastavený na' + listType);
   };
 
-  const [listType, setListType] = useState('');
   const handleRadioChange = (e) => {
     setListType(e.target.value);
   };
@@ -27,6 +43,7 @@ const ListChoice = () => {
             id="shop"
             name="list"
             onChange={handleRadioChange}
+            value="shop"
           />
           Nákupní
         </label>
@@ -38,6 +55,7 @@ const ListChoice = () => {
             id="travel"
             name="list"
             onChange={handleRadioChange}
+            value="travel"
           />
           Cestovní
         </label>
@@ -49,6 +67,7 @@ const ListChoice = () => {
             id="wish"
             name="list"
             onChange={handleRadioChange}
+            value="wish"
           />
           Přání
         </label>
@@ -58,6 +77,10 @@ const ListChoice = () => {
           type="text"
           placeholder="... a bude se jmenovat"
           className="new-list--name"
+          value={listName}
+          onChange={(event) => {
+            setListName(event.target.value);
+          }}
         />
         <button type="submit" className="create-list">
           Vytvořit
