@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { render } from 'react-dom';
+import { db } from '../../db.js';
 import { ListItem } from '../ListItem/index.jsx';
 
 export const ListCategory = (props) => {
@@ -8,12 +9,30 @@ export const ListCategory = (props) => {
     setActive(!active);
   };
 
-  return (
-    <div className="kategorie-container">
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    return db
+      .collection('seznamy')
+      .doc(props.id)
+      .collection('kategorie')
+      .onSnapshot((querySnapshot) => {
+        setCategories(
+          querySnapshot.docs.map((doc) => {
+            const data = doc.data();
+            data.id = doc.id;
+            return data;
+          }),
+        );
+      });
+  }, [props.id]);
+
+  return categories.map((category) => (
+    <div className="kategorie-container" key={category.id}>
       <div className="kategorie-list">
         <input className="input-checkbox-ktg" type="checkbox" />
         <button className="btn-kategorie" onClick={handleClick}>
-          <img src="ikonka" /> tohle bude kategorie s rozbalovací ikonkou
+          <img src="ikonka" /> {category.nazev}
           <img src="ikonka" />
         </button>
         <img className="ikonka-delete" src="ikonka-delete" />
@@ -27,5 +46,5 @@ export const ListCategory = (props) => {
         </ul>
       ) : null}
     </div>
-  );
+  ));
 };
