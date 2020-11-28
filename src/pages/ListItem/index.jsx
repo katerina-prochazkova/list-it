@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 export const ListItem = (props) => {
   return (
@@ -6,7 +6,7 @@ export const ListItem = (props) => {
       <div>
         <input className="input-checkbox" type="checkbox" />{' '}
         <img src="ikonka" />
-        {props.name} {props.amount}
+        {props.nazev} {props.mnozstvi}
       </div>
       <img className="ikonka-delete" src="ikonka-delete" />
     </li>

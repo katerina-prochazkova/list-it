@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { db } from '../../db';
 import { ListItem } from '../ListItem';
 
 export const Category = (props) => {
@@ -6,6 +7,26 @@ export const Category = (props) => {
   const handleClick = () => {
     setActive(!active);
   };
+
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    return db
+      .collection('seznamy')
+      .doc(props.listId)
+      .collection('kategorie')
+      .doc(props.id)
+      .collection('polozky')
+      .onSnapshot((querySnapshot) => {
+        setItems(
+          querySnapshot.docs.map((doc) => {
+            const data = doc.data();
+            data.id = doc.id;
+            return data;
+          }),
+        );
+      });
+  }, [props.id, props.listId]);
 
   return (
     <div className="kategorie-container">
@@ -16,13 +37,12 @@ export const Category = (props) => {
           <img src="ikonka" />
         </button>
         <img className="ikonka-delete" src="ikonka-delete" />
-        {/* <!-- na klik rozbalí a zabalí ten ul na klik se taky změní ta rozbal ikonka z trojuhelníku dolů na trojuhelník nahoru --> */}
       </div>
       {active ? (
         <ul className="list">
-          <ListItem name="Rohlíky" amount="5" />
-          <ListItem name="Jablka" amount="1kg" />
-          {/* list item se zmapuje */}
+          {items.map((item) => (
+            <ListItem key={item.id} {...item} />
+          ))}
         </ul>
       ) : null}
     </div>
