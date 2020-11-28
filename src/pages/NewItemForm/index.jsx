@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import { db } from '../../db';
+import { IconButton } from '../IconButton';
 
 export const NewItemForm = (props) => {
   const [itemName, setItemName] = useState('');
   const [itemAmount, setItemAmount] = useState('');
+  const [activeCategory, setActiveCategory] = useState(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     db.collection('seznamy')
       .doc(props.listId)
       .collection('kategorie')
-      .doc('tPpwuMyS1IyZJr0HcRSh')
+      .doc(activeCategory)
       .collection('polozky')
       .add({
         nazev: itemName,
@@ -43,11 +45,17 @@ export const NewItemForm = (props) => {
         <br />
       </div>
       <div className="kategorie-ikonky">
-        kategorie ikonky
-        <img className="ikonky-volba" src="ikonka" />
-        <img className="ikonky-volba" src="ikonka" />
-        <img className="ikonky-volba" src="ikonka" />
-        <img className="ikonky-volba" src="ikonka" />
+        {props.categories.map((category) => (
+          <IconButton
+            key={category.id}
+            {...category}
+            selected={category.id === activeCategory}
+            onClick={() => {
+              console.log(category.id);
+              setActiveCategory(category.id);
+            }}
+          />
+        ))}
         {/* tady by mohly být ikonky pro kategorie (nebo dropdown select) */}
       </div>
       <button className="btn-add-item" type="submit">

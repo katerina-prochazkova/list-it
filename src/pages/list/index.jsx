@@ -44,7 +44,6 @@ export const List = (props) => {
           <div className="seznam-container">
             <h2>{seznam.nazev}</h2>
 
-            <NewItemForm listId={id} />
             <ListCategory id={id} />
           </div>
         </main>

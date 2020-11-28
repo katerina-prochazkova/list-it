@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { db } from '../../db.js';
 import { Category } from '../Category/index.jsx';
+import { NewItemForm } from '../NewItemForm/index.jsx';
 
 export const ListCategory = (props) => {
   const [categories, setCategories] = useState([]);
@@ -24,7 +25,7 @@ export const ListCategory = (props) => {
 
   return (
     <>
-      {' '}
+      <NewItemForm listId={props.id} categories={categories} />
       {categories.map((category) => (
         <Category key={category.id} {...category} listId={props.id} />
       ))}
