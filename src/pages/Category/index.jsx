@@ -31,7 +31,24 @@ export const Category = (props) => {
   return (
     <div className="kategorie-container">
       <div className="kategorie-list">
-        <input className="input-checkbox-ktg" type="checkbox" />
+        <input
+          className="input-checkbox-ktg"
+          type="checkbox"
+          checked={items.every((item) => item.koupeno)}
+          onChange={(event) => {
+            items.forEach((item) => {
+              db.collection('seznamy')
+                .doc(props.listId)
+                .collection('kategorie')
+                .doc(props.id)
+                .collection('polozky')
+                .doc(item.id)
+                .update({
+                  koupeno: event.target.checked,
+                });
+            });
+          }}
+        />
         <button className="btn-kategorie" onClick={handleClick}>
           <img
             className="ikonka-kategorie"

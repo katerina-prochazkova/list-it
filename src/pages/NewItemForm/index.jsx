@@ -50,9 +50,7 @@ export const NewItemForm = (props) => {
         <img className="ikonky-volba" src="ikonka" />
         {/* tady by mohly být ikonky pro kategorie (nebo dropdown select) */}
       </div>
-      <button className="btn-add-item" type="submit">
-        přidat
-      </button>
+      <button className="btn-add-item" type="submit"></button>
       {/* <!-- tady bude ikonka zelené kolečko s pluskem--> */}
     </form>
   );
