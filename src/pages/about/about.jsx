@@ -7,6 +7,7 @@ export default function About() {
       <header>
         <div class="navigation-container">
           <button id="nav-btn" class="nav-btn"></button>
+          <h3>List it!</h3>
           <nav class="nav-closed">
             <a id=" domu-btn" class="nav-polozky" href="index.html">
               Úvodní stránka
@@ -14,13 +15,13 @@ export default function About() {
             <a id="seznamy-btn" class="nav-polozky" href="">
               Moje seznamy
             </a>
-            <a id="app-btn" class="nav-polozky" href="pages/about/index.html">
+            <a id="app-btn" class="nav-polozky" href="about.html">
               O aplikaci
             </a>
           </nav>
         </div>
       </header>
-      <main>
+      <main class="about-main">
         <h3>List it!</h3>
         <h1>Jak to funguje</h1>
         <div>

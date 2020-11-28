@@ -52,7 +52,6 @@ export function Home() {
           </div>
         </div>
       </main>
-      <footer>KPKP 2020</footer>
     </>
   );
 }

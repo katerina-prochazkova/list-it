@@ -1,4 +1,5 @@
 /* style info
+
 COLOURS:
 light green: #dbf9b8
 green: #006613
@@ -8,7 +9,7 @@ pink/red: #ff5f55
 white: #ffffff
 black: #000000
 
-FONTS:
+FONTS: 'Jost', sans-serif
 
 
 */
@@ -56,6 +57,7 @@ h1 {
 
 p {
   margin: 30px;
+  font-size: 18px;
 }
 .new-list {
   display: flex;
@@ -169,6 +171,8 @@ footer {
     flex-direction: row;
     background-color: #ffffff;
     justify-content: center;
+    height: 70px;
+    align-items: center;
   }
   .nav-btn {
     display: none;
@@ -176,7 +180,7 @@ footer {
   .nav-closed {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 70%;
   }
   .nav-polozky {
@@ -201,5 +205,171 @@ footer {
 
 /* -----VELKÉ ROZLIŠENÍ od 992px -----*/
 
-@media screen and (min-width: 992px) {
+/* @media screen and (min-width: 992px) {
+} */
+
+/*-------------------LIST-------------------*/
+
+.nav-btn {
+  margin: 30px;
+  margin-left: 40px;
+  height: 50px;
+  width: 50px;
+  /* background-image: ; HAMBURGER MENU*/
+}
+
+.navigation-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h3 {
+  margin: auto 40px auto auto;
+  font-size: 24px;
+  display: inline-block;
+}
+
+.seznam-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+h2 {
+  width: 70%;
+  margin: 30px 0;
+  padding: 8px 24px;
+  font-family: 'Jost', sans-serif;
+  font-size: 36;
+  font-weight: 600;
+  color: white;
+  background-color: #fe5f55;
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.form-list {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: auto;
+  padding-left: 30px;
+}
+
+form .input {
+  font-size: 18px;
+  font-family: 'Jost', sans-serif;
+  width: 85%;
+  border: 1px solid #dbf9b8;
+  padding: 5px;
+}
+
+.kategorie-ikonky {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid red;
+  width: 85%;
+  margin: 10px 0;
+}
+.ikonky-volba {
+  width: 20%;
+}
+
+.btn-add-item {
+  background-color: #006613;
+  color: #dbf9b8;
+  padding: 10px;
+  border: none;
+  font-size: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-family: 'Jost', sans-serif;
+  position: absolute;
+  left: 80%;
+  top: 10%;
+}
+
+.btn-add-item:hover,
+.btn-add-item:focus {
+  background-color: #007315;
+  transform: scale(1.1);
+}
+
+.kategorie-container {
+  width: 90%;
+}
+.kategorie-list {
+  margin-top: 30px;
+  background-color: #fe5f55;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-checkbox-ktg {
+  width: 25px;
+  height: 25px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.btn-kategorie {
+  margin: 0 auto;
+  width: 90%;
+  padding: 5px;
+  background-color: #fe5f55;
+  border: none;
+  text-align: left;
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+.btn-kategorie:hover,
+.btn-kategorie:focus {
+  background-color: #f82f36;
+}
+
+.ikonka-delete {
+  width: 33px;
+  height: 33px;
+}
+
+ul {
+  list-style-type: none;
+  border: 1px solid red;
+  padding: 0;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Jost', sans-serif;
+  font-size: 18px;
+}
+
+/*-----STŘEDNÍ ROZLIŠENÍ od 720px -----*/
+@media screen and (min-width: 720px) {
+  .list-main {
+    width: 80%;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*-------------------ABOUT-------------------*/
+@media screen and (min-width: 720px) {
+  .about-main {
+    width: 50%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

@@ -57,6 +57,7 @@ h1 {
 
 p {
   margin: 30px;
+  font-size: 18px;
 }
 .new-list {
   display: flex;
@@ -358,6 +359,16 @@ ul {
   .list-main {
     width: 80%;
     max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*-------------------ABOUT-------------------*/
+@media screen and (min-width: 720px) {
+  .about-main {
+    width: 50%;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
   }
