@@ -320,6 +320,7 @@ form .input {
   top: 10%;
   outline: none;
   cursor: pointer;
+  background-image: url('img/plus.svg');
 }
 
 .btn-add-item:hover,
