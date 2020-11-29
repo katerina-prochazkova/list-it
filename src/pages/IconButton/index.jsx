@@ -5,6 +5,7 @@ export const IconButton = (props) => {
     <button
       className={props.selected ? 'btn-icon btn-icon--selected' : 'btn-icon'}
       onClick={props.onClick}
+      type="button"
     >
       <img className="ikonky-volba" src={`/assets/${props.ikona}.svg`} />
     </button>

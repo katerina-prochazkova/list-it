@@ -136,7 +136,7 @@ p {
 .create-list {
   border: none;
   color: white;
-  background-color: #fe5f55;
+  background-color: #f82f36;
 
   font-family: 'Jost', sans-serif;
   font-size: 14px;
@@ -147,15 +147,13 @@ p {
   outline: none;
 }
 
-.create-list-disabled {
-  background-color: #fe5f55;
-}
-.create-list-active {
-  background-color: #f82f36;
-}
-
 .create-list:hover {
   transform: scale(1.1);
+}
+
+.create-list:disabled {
+  background-color: #fe5f55;
+  transform: none;
 }
 
 .about-btn {
