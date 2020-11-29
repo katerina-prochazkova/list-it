@@ -19,6 +19,16 @@ export const List = (props) => {
       });
   }, [id]);
 
+  useEffect(() => {
+    const body = document.querySelector('body');
+    if (seznam !== null) {
+      body.classList.add(`type-${seznam.typ}`);
+      return () => {
+        body.classList.remove(`type-${seznam.typ}`);
+      };
+    }
+  }, [seznam]);
+
   return (
     <>
       {/* <p>Id: {id}</p> */}
