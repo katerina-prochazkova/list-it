@@ -312,7 +312,6 @@ form .input {
 .new-input {
   text-align: center;
 }
-
 .kategorie-ikonky {
   display: flex;
   flex-direction: row;
@@ -320,6 +319,27 @@ form .input {
   justify-content: center;
 
   margin: 10px 0;
+}
+.btn-icon-action {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border: 1px solid white;
+  border-radius: 50%;
+  outline: none;
+  background-color: #fe5f55;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.btn-icon-action:hover {
+  background-color: #f82f36;
+}
+.ikonky-action {
+  width: 36px;
+  height: 36px;
+  padding: 3px;
+  background-color: transparent;
+  filter: invert(1);
 }
 .btn-icon {
   flex-shrink: 0;
