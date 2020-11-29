@@ -7,7 +7,12 @@ export const IconButton = (props) => {
       onClick={props.onClick}
       type="button"
     >
-      <img className="ikonky-volba" src={`/assets/${props.ikona}.svg`} />
+      <img
+        className="ikonky-volba"
+        src={`/assets/${props.ikona}.svg`}
+        alt={props.nazev}
+        title={props.nazev}
+      />
     </button>
   );
 };
