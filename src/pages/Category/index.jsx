@@ -28,70 +28,63 @@ export const Category = (props) => {
       });
   }, [props.id, props.listId]);
 
-  return (
-    <div className="kategorie-container">
-      <div className="kategorie-list">
-        <input
-          className="input-checkbox-ktg"
-          type="checkbox"
-          checked={items.length > 0 && items.every((item) => item.koupeno)}
-          onChange={(event) => {
-            items.forEach((item) => {
+  if (items.length > 0) {
+    return (
+      <div className="kategorie-container">
+        <div className="kategorie-list">
+          <input
+            className="input-checkbox-ktg"
+            type="checkbox"
+            checked={items.length > 0 && items.every((item) => item.koupeno)}
+            onChange={(event) => {
+              items.forEach((item) => {
+                db.collection('seznamy')
+                  .doc(props.listId)
+                  .collection('kategorie')
+                  .doc(props.id)
+                  .collection('polozky')
+                  .doc(item.id)
+                  .update({
+                    koupeno: event.target.checked,
+                  });
+              });
+            }}
+          />
+          <button className="btn-kategorie" onClick={handleClick}>
+            <img
+              className="ikonka-kategorie"
+              src={`/assets/${props.ikona}.svg`}
+            />{' '}
+            {props.nazev}
+            <div className={active ? 'ikonka-sbal' : 'ikonka-rozbal'} />
+          </button>
+          <button
+            id="ikn-dlt"
+            className="ikonka-delete"
+            onClick={() => {
               db.collection('seznamy')
                 .doc(props.listId)
                 .collection('kategorie')
                 .doc(props.id)
-                .collection('polozky')
-                .doc(item.id)
-                .update({
-                  koupeno: event.target.checked,
-                });
-            });
-          }}
-        />
-        <button className="btn-kategorie" onClick={handleClick}>
-          <img
-            className="ikonka-kategorie"
-            src={`/assets/${props.ikona}.svg`}
-          />{' '}
-          {props.nazev}
-          <div className={active ? 'ikonka-sbal' : 'ikonka-rozbal'} />
-        </button>
-        <button
-          id="ikn-dlt"
-          className="ikonka-delete"
-<<<<<<< HEAD
-          onClick={() => {
-            db.collection('seznamy')
-              .doc(props.listId)
-              .collection('kategorie')
-              .doc(props.id)
-              .delete();
-          }}
-=======
-          // onClick={() =>
-          //   db
-          //     .collection('seznamy')
-          //     .doc(props.listId)
-          //     .collection('kategorie')
-          //     .doc(props.catId)
-          //     .delete()
-          // } DOŘEŠIT S FILIPEM
->>>>>>> f17436f8a0d7251ec1ad8915d775938c3234283d
-        ></button>
+                .delete();
+            }}
+          ></button>
+        </div>
+        {active ? (
+          <ul className="list">
+            {items.map((item) => (
+              <ListItem
+                key={item.id}
+                {...item}
+                catId={props.id}
+                listId={props.listId}
+              />
+            ))}
+          </ul>
+        ) : null}
       </div>
-      {active ? (
-        <ul className="list">
-          {items.map((item) => (
-            <ListItem
-              key={item.id}
-              {...item}
-              catId={props.id}
-              listId={props.listId}
-            />
-          ))}
-        </ul>
-      ) : null}
-    </div>
-  );
+    );
+  } else {
+    return null;
+  }
 };
