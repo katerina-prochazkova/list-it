@@ -1,21 +1,25 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function About() {
   return (
     <>
       <header>
-        <div class="navigation-container">
-          <button id="nav-btn" class="nav-btn">
-            {/* <img src={'img/hamburger.svg'} /> */}
+        <div className="navigation-container">
+          <button id="nav-btn" className="nav-btn">
+            {/* hamburger menu */}
           </button>
           <h3>List it!</h3>
-          <nav class="nav-closed">
-            <a id=" domu-btn" class="nav-polozky" href="index.html">
+          <nav className="nav-closed">
+            <Link to="/" id="home-btn" className="nav-polozky">
               Úvodní stránka
-            </a>
-            <a id="seznamy-btn" class="nav-polozky" href="">
+            </Link>
+            <Link to="/list/66" id="seznamy-btn" className="nav-polozky">
               Moje seznamy
-            </a>
+            </Link>
+            {/* <Link to="/about" id="app-btn" className="nav-polozky">
+            O aplikaci
+          </Link> */}
           </nav>
         </div>
       </header>
