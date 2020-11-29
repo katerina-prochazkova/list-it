@@ -3,7 +3,6 @@ import { db } from '../../db';
 
 export const ListItem = (props) => {
   const handleChange = (event) => {
-    console.log(props.listId, props.catId, props.id);
     db.collection('seznamy')
       .doc(props.listId)
       .collection('kategorie')
@@ -25,7 +24,7 @@ export const ListItem = (props) => {
           checked={props.koupeno}
         />{' '}
         <div>{props.nazev}</div>
-        <span class="vypln" />
+        <span className="vypln" />
         <div> {props.mnozstvi}</div>
         <button
           id="ikn-dlt"

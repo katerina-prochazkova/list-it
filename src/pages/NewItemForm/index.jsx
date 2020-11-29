@@ -50,11 +50,9 @@ export const NewItemForm = (props) => {
             {...category}
             selected={category.id === activeCategory}
             onClick={() => {
-              console.log(category.id);
               setActiveCategory(
                 category.id === activeCategory ? null : category.id,
               );
-              // setSelected(!selected);
             }}
           />
         ))}

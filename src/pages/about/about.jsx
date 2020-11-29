@@ -20,7 +20,7 @@ export default function About() {
           </nav>
         </div>
       </header>
-      <main class="about-main">
+      <main className="about-main">
         <h1>Jak to funguje</h1>
         <div>
           <p>

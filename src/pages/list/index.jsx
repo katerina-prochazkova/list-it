@@ -8,7 +8,7 @@ import { NewItemForm } from '../NewItemForm/index.jsx';
 export const List = (props) => {
   const { id } = useParams();
   const [seznam, setSeznam] = useState(null);
-  console.log(seznam);
+  const [urlCopied, setUrlCopied] = useState(false);
 
   useEffect(() => {
     return db
@@ -66,7 +66,11 @@ export const List = (props) => {
               </button>
               <button
                 className="btn-icon-action"
-                onClick={() => navigator.clipboard.writeText(location.href)}
+                onClick={() => {
+                  navigator.clipboard.writeText(location.href);
+                  setUrlCopied(true);
+                  setTimeout(() => setUrlCopied(false), 4000);
+                }}
               >
                 <img
                   className="ikonky-action"
@@ -75,6 +79,9 @@ export const List = (props) => {
                   title="zkopírovat URL adresu"
                 />
               </button>
+              {urlCopied ? (
+                <div className="message-copied">URL adresa zkopírována</div>
+              ) : null}
             </div>
             <h2>{seznam.nazev}</h2>
 
