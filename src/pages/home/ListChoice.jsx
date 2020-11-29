@@ -63,7 +63,6 @@ const ListChoice = () => {
 
   return (
     <form className="new-list--form" onSubmit={handleSubmit}>
-      <label className="new-list--intro">Bude to seznam...</label>
       <li className="new-list--type">
         <label htmlFor="shop">
           <input

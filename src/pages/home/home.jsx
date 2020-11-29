@@ -44,11 +44,10 @@ export function Home() {
             </button>
             {newList ? <ListChoice /> : ''}
           </div>
-          <div className="about-btn">
-            <Link to="/about" className="about">
-              O aplikaci
-            </Link>
-          </div>
+
+          <Link to="/about" className="about-btn">
+            O aplikaci
+          </Link>
         </div>
       </main>
     </>

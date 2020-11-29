@@ -1,11 +1,6 @@
-/* style info
-
-COLOURS:
-background green: #e9ffdb
-  nebo  rgb(233, 255, 219)
+/* STYLOVÁNÍ
+background green: #e9ffdb  nebo  rgb(233, 255, 219)
 light green: #dbf9b8
-
-
 green: #006613
 pink/red: #ff5f55
   alternative 1: #f82f36  
@@ -14,8 +9,6 @@ white: #ffffff
 black: #000000
 
 FONTS: 'Jost', sans-serif
-
-
 */
 
 *,
@@ -23,7 +16,6 @@ FONTS: 'Jost', sans-serif
 *::after {
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Jost', sans-serif;
   font-size: 16px;
@@ -33,14 +25,28 @@ body {
   margin: 0;
 }
 
-/* HEADER */
 header {
-  height: 50px;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+h3 {
+  margin: 5px 20px;
+  font-size: 24px;
+  display: inline-block;
+}
+
+.navigation-container {
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-btn {
-  margin: 30px;
-  margin-left: 40px;
+  margin: 10px 20px;
   height: 50px;
   width: 50px;
   border-radius: 10px;
@@ -52,22 +58,28 @@ header {
   cursor: pointer;
   background-color: #e9ffdb;
 }
-
 .nav-btn:hover {
   background-color: #dbf9b8;
+  transform: scale(1.1);
 }
-
 .nav-closed {
   display: none;
 }
 
-/* MAIN */
+/* ------------------MAIN-------------------- */
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 main {
+  width: 100%;
+  height: auto;
   margin: 0;
   margin-top: 0;
-  border: 3px solid red;
-  flex-grow: 1;
   position: relative;
+  flex-grow: 1;
 }
 h1 {
   font-family: 'Poppins', sans-serif;
@@ -76,17 +88,16 @@ h1 {
   color: #006613;
   margin: 50px 0;
 }
-
 p {
-  margin: 50px;
+  margin: 10px 20px;
   font-size: 18px;
 }
+/*-------- NOVÝ SEZNAM ---------*/
 .new-list {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .new-list--button {
   margin: 20px 0;
   outline: none;
@@ -105,7 +116,6 @@ p {
   background-color: #f82f36;
   transform: scale(1.1);
 }
-
 .new-list--button--selected {
   margin: 20px 0;
   outline: none;
@@ -119,16 +129,10 @@ p {
   padding: 12px 28px;
   border-radius: 30px;
 }
-
 .new-list--form {
   align-self: stretch;
-  margin: 50px;
+  margin: 15px 50px;
   position: relative;
-}
-.new-list--intro {
-  color: black;
-  font-size: 18px;
-  margin: 25px;
 }
 .new-list--type {
   list-style-type: none;
@@ -136,7 +140,6 @@ p {
   margin: 5px;
   margin-left: 3px;
 }
-
 .new-list--name {
   width: 250px;
   border: none;
@@ -144,14 +147,13 @@ p {
   font-family: 'Jost', sans-serif;
   font-size: 18px;
   background-color: inherit;
-  margin: 25px 0 0 0;
+  margin: 10px 25px 0 0;
   padding-bottom: 10px;
   outline: none;
 }
 .new-list--name::placeholder {
-  color: black;
+  color: rgb(65, 65, 65);
 }
-
 .create-list {
   border: none;
   color: white;
@@ -160,49 +162,41 @@ p {
   font-size: 18px;
   font-weight: 600;
   padding: 10px 30px;
+  margin-top: 25px;
   border-radius: 30px;
   cursor: pointer;
   outline: none;
-  position: absolute;
-  top: 85%;
-  left: 70%;
 }
-
 .create-list:hover {
   transform: scale(1.1);
 }
-
 .create-list:disabled {
   background-color: #fe5f55;
   transform: none;
 }
-
+/*-------- konec ---- NOVÝ SEZNAM ---------*/
 .about-btn {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  margin: 35px;
-  /* position: absolute; */
-}
-
-.about {
   width: 100px;
   height: 100px;
   padding: 35px 10px;
+  margin: 30px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
   text-decoration: none;
   background-color: #006613;
   color: #ffffff;
   text-align: center;
   border-radius: 50%;
-  /* tady bych ráda otočila text o -30°*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 .about:hover {
   background-color: #007315;
   transform: scale(1.1);
 }
-
-/*FOOTER*/
+/*--------------FOOTER ------------------*/
 footer {
   width: 100%;
   height: 50px;
@@ -212,13 +206,12 @@ footer {
   color: white;
 }
 
-/* -----STŘEDNÍ ROZLIŠENÍ od 720px -----*/
-
-@media screen and (min-width: 720px) {
+/* ------------STŘEDNÍ ROZLIŠENÍ od 620px --------------*/
+@media screen and (min-width: 620px) {
   body {
     background-image: url('img/background-pics/woods.jpg');
   }
-
+  /* DOŘEŠIT NALÍVÁNÍ POZADÍ */
   .body-shop {
     background-image: url('img/background-pics/gifts.jpg');
   }
@@ -228,29 +221,14 @@ footer {
   .body-wish {
     background-image: url('img/background-pics/gifts.jpg');
   }
+  /*-------- KONEC POZADÍ ---------*/
 
-  .app {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  /* HEADER */
   header {
-    width: 100%;
-    height: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 70px;
     background-color: white;
   }
-
   .navigation-container {
-    height: 50px;
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    border: 3px solid red;
   }
   .nav-btn {
     display: none;
@@ -272,12 +250,11 @@ footer {
     font-size: 18px;
     padding: 8px;
   }
-  /*MAIN*/
 
+  /* ------------------MAIN-------------------- */
   main {
-    width: 50%;
+    width: 80%;
     max-width: 650px;
-    height: auto;
     margin: 50px auto 0px;
     margin-left: auto;
     background-image: linear-gradient(
@@ -285,27 +262,26 @@ footer {
       rgba(233, 255, 219, 0.7)
     );
   }
-}
 
+  p {
+    margin: 10px 50px;
+  }
+  .about-btn {
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    margin: 30px -55px 30px 30px;
+  }
+}
 /* -----VELKÉ ROZLIŠENÍ od 992px -----*/
 
-/* @media screen and (min-width: 992px) {
-} */
-
+@media screen and (min-width: 992px) {
+  main {
+    width: 50%;
+  }
+}
+/*------------------------------------------*/
 /*-------------------LIST-------------------*/
-
-.navigation-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-h3 {
-  margin: auto 40px auto auto;
-  font-size: 24px;
-  display: inline-block;
-}
 
 .seznam-container {
   display: flex;
@@ -313,7 +289,6 @@ h3 {
   align-items: center;
   padding: 10px;
 }
-
 h2 {
   width: 100%;
   margin: 30px 0;
@@ -326,7 +301,6 @@ h2 {
   border-radius: 30px;
   text-align: center;
 }
-
 .form-list {
   width: 90%;
   display: flex;
@@ -334,7 +308,6 @@ h2 {
   margin: auto;
   padding-left: 30px;
 }
-
 form .input {
   font-size: 18px;
   font-family: 'Jost', sans-serif;
@@ -343,7 +316,6 @@ form .input {
   padding: 5px;
   outline: none;
 }
-
 .kategorie-ikonky {
   display: flex;
   flex-direction: row;
@@ -375,7 +347,6 @@ form .input {
   background-color: transparent;
   filter: invert(1);
 }
-
 .btn-add-item {
   background-color: #006613;
   color: #dbf9b8;
@@ -393,12 +364,10 @@ form .input {
   cursor: pointer;
   background-image: url('img/plus.svg');
 }
-
 .btn-add-item:hover {
   background-color: #159f06;
   transform: scale(1.1);
 }
-
 .kategorie-container {
   width: 90%;
 }
@@ -408,7 +377,6 @@ form .input {
   display: flex;
   justify-content: space-between;
 }
-
 .input-checkbox-ktg {
   width: 24px;
   height: 24px;
@@ -417,7 +385,6 @@ form .input {
 .input-checkbox-ktg:hover {
   transform: scale(1.1);
 }
-
 .btn-kategorie {
   margin: 0 auto;
   width: 90%;
@@ -437,13 +404,11 @@ form .input {
   background-color: #f82f36;
   transform: scale(1.01);
 }
-
 .ikonka-kategorie {
   width: 33px;
   height: 33px;
   margin: 0 5px;
 }
-
 .ikonka-rozbal {
   display: inline-block;
   width: 25px;
@@ -452,7 +417,6 @@ form .input {
   background-image: url('./img/down.svg');
   border: none;
 }
-
 .ikonka-sbal {
   display: inline-block;
   width: 25px;
@@ -461,7 +425,6 @@ form .input {
   background-image: url('./img/up.svg');
   border: none;
 }
-
 .ikonka-delete {
   background-color: transparent;
   width: 33px;
@@ -474,19 +437,14 @@ form .input {
   border: none;
   cursor: pointer;
 }
-
 .ikonka-delete:hover {
-  /* background-color: #f82f36; */
   transform: scale(1.2);
 }
-
 ul {
   margin: 0 30px;
   list-style-type: none;
-  /* border: 1px solid red; */
   padding: 0;
 }
-
 .input-checkbox-item {
   width: 24px;
   height: 24px;
@@ -497,7 +455,6 @@ ul {
 .input-checkbox-item:hover {
   transform: scale(1.1);
 }
-
 .vypln {
   border-bottom: 1px dotted #000000;
   flex-grow: 1;
@@ -517,8 +474,9 @@ ul {
 .item-checked {
   background-color: #dbf9b8;
 }
-/*-----STŘEDNÍ ROZLIŠENÍ od 720px -----*/
-@media screen and (min-width: 720px) {
+
+/*-----LIST --- STŘEDNÍ ROZLIŠENÍ od 620px -----*/
+@media screen and (min-width: 620px) {
   .list-main {
     width: 80%;
     max-width: 650px;
@@ -527,8 +485,15 @@ ul {
   }
 }
 
+/* -----LIST ------PRINT -------------*/
+@media print {
+  .form-list {
+    display: none;
+  }
+}
+
 /*-------------------ABOUT-------------------*/
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 620px) {
   .about-main {
     width: 50%;
     max-width: 600px;

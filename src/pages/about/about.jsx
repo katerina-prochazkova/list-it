@@ -17,9 +17,6 @@ export default function About() {
             <Link to="/list/66" id="seznamy-btn" className="nav-polozky">
               Moje seznamy
             </Link>
-            {/* <Link to="/about" id="app-btn" className="nav-polozky">
-            O aplikaci
-          </Link> */}
           </nav>
         </div>
       </header>
@@ -31,19 +28,19 @@ export default function About() {
             nasdílet, komu potřebujete. Každý, kdo otevře odkaz, bude moci do
             seznamu dále přispívat a upravovat ho.
           </p>
-          <div>
-            <p>1. Vyberte seznam podle účelu</p>
-            <p>
-              2. Přidejte do seznamu položky. Jednotlivým položkám můžete
-              přidávat i kategorie pro přehlednější zobrazení. Položky můžete
-              označit jako již vyřešené, nebo je odstranit úplně.
-            </p>
-            <p>
-              3. Pošlete odkaz na seznam rodině či přátelům pomocí svého
-              oblíbeného komunikačního kanálu. Odkaz na seznam si nejlépe uložte
-              do záložek pro snadný opětovný přístup.
-            </p>
-          </div>
+          <br />
+          <br />
+          <p>1. Vyberte seznam podle účelu</p>
+          <p>
+            2. Přidejte do seznamu položky. Jednotlivým položkám můžete přidávat
+            i kategorie pro přehlednější zobrazení. Položky můžete označit jako
+            již vyřešené, nebo je odstranit úplně.
+          </p>
+          <p>
+            3. Pošlete odkaz na seznam rodině či přátelům pomocí svého
+            oblíbeného komunikačního kanálu. Odkaz na seznam si nejlépe uložte
+            do záložek pro snadný opětovný přístup.
+          </p>
         </div>
       </main>
     </>
