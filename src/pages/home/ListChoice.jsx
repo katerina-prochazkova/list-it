@@ -15,11 +15,6 @@ const ListChoice = () => {
         const category = doc.collection('kategorie');
         if (listType === 'shop' || listType === 'travel') {
           category.add({
-            nazev: 'ostatní',
-            ikona: 'threedots',
-            poradi: 4,
-          });
-          category.add({
             nazev: 'lékárna',
             ikona: 'bandaid',
             poradi: 3,
@@ -40,11 +35,6 @@ const ListChoice = () => {
             poradi: 0,
           });
         } else if (listType === 'wish') {
-          category.add({
-            nazev: 'ostatní',
-            ikona: 'threedots',
-            poradi: 1,
-          });
           category.add({
             nazev: 'dárky',
             ikona: 'gift',
