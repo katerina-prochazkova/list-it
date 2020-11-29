@@ -100,7 +100,11 @@ const ListChoice = () => {
             setListName(event.target.value);
           }}
         />
-        <button type="submit" className="create-list">
+        <button
+          type="submit"
+          className="create-list"
+          disabled={listName === '' || listType === ''}
+        >
           Vytvořit
         </button>
       </li>

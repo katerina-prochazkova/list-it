@@ -60,16 +60,14 @@ export const Category = (props) => {
         <button
           id="ikn-dlt"
           className="ikonka-delete"
-          onClick={() =>
-            db
-              .collection('seznamy')
-              .doc(props.listId)
-              .collection('kategorie')
-              .doc(props.catId)
-              .collection('polozky')
-              .doc(props.id)
-              .delete()
-          }
+          // onClick={() =>
+          //   db
+          //     .collection('seznamy')
+          //     .doc(props.listId)
+          //     .collection('kategorie')
+          //     .doc(props.catId)
+          //     .delete()
+          // } DOŘEŠIT S FILIPEM
         ></button>
       </div>
       {active ? (

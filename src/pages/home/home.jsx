@@ -40,6 +40,7 @@ export function Home() {
                   : 'new-list--button'
               }
               onClick={() => setNewList(true)}
+              // disabled={newlist ? true : false} PROBRAT S FILIPEM
             >
               {newList ? 'Můj seznam bude...' : 'Chci nový seznam'}
             </button>
