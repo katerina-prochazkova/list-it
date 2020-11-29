@@ -52,6 +52,14 @@ export const List = (props) => {
       {seznam === null ? null : (
         <main className="list-main">
           <div className="seznam-container">
+            <div className="container-icons--action">
+              <button className="" onClick={}>
+                <img className="" src="" alt="" title="" />
+              </button>
+              <button className="" onClick={}>
+                <img className="" src="" alt="" title="" />
+              </button>
+            </div>
             <h2>{seznam.nazev}</h2>
 
             <ListCategory id={id} />
