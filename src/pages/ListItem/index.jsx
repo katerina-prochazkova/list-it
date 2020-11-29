@@ -17,7 +17,7 @@ export const ListItem = (props) => {
 
   return (
     <div className="item-line">
-      <li className="list-item">
+      <li className={props.koupeno ? 'list-item item-checked' : 'list-item'}>
         <input
           className="input-checkbox-item"
           type="checkbox"

@@ -34,7 +34,7 @@ export const Category = (props) => {
         <input
           className="input-checkbox-ktg"
           type="checkbox"
-          checked={items.every((item) => item.koupeno)}
+          checked={items.length > 0 && items.every((item) => item.koupeno)}
           onChange={(event) => {
             items.forEach((item) => {
               db.collection('seznamy')
@@ -60,16 +60,13 @@ export const Category = (props) => {
         <button
           id="ikn-dlt"
           className="ikonka-delete"
-          onClick={() =>
-            db
-              .collection('seznamy')
+          onClick={() => {
+            db.collection('seznamy')
               .doc(props.listId)
               .collection('kategorie')
-              .doc(props.catId)
-              .collection('polozky')
               .doc(props.id)
-              .delete()
-          }
+              .delete();
+          }}
         ></button>
       </div>
       {active ? (
