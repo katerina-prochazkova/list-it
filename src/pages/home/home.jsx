@@ -35,10 +35,12 @@ export function Home() {
           <div className="new-list">
             <button
               className={
-                newList
-                  ? 'new-list--button new-list--button--selected'
-                  : 'new-list--button'
+                newList ? 'new-list--button--selected' : 'new-list--button'
               }
+              disabled={newList ? true : false}
+              // PROBRAT
+              // S
+              // FILIPEM
               onClick={() => setNewList(true)}
             >
               {newList ? 'Můj seznam bude...' : 'Chci nový seznam'}
