@@ -23,6 +23,22 @@ body {
   height: 100vh;
   margin: 0;
 }
+/* .type-shop {
+  background-image: url('img/background-pics/');
+} */
+
+.type-travel {
+  background-image: url('img/background-pics/travel-background2.jpg');
+  background-position: top;
+  background-size: cover;
+}
+
+.type-wish {
+  background-image: url('img/background-pics/gifts-background.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
 header {
   width: 100%;
   height: auto;
@@ -319,6 +335,12 @@ form .input {
   justify-content: center;
 
   margin: 10px 0;
+}
+.container-icons--action {
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+  margin-top: 10px;
 }
 .btn-icon-action {
   flex-shrink: 0;

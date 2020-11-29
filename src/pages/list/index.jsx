@@ -53,11 +53,27 @@ export const List = (props) => {
         <main className="list-main">
           <div className="seznam-container">
             <div className="container-icons--action">
-              <button className="" onClick={}>
-                <img className="" src="" alt="" title="" />
+              <button
+                className="btn-icon-action"
+                onClick={() => window.print()}
+              >
+                <img
+                  className="ikonky-action"
+                  src="/assets/print.svg"
+                  alt="tisk"
+                  title="tisk"
+                />
               </button>
-              <button className="" onClick={}>
-                <img className="" src="" alt="" title="" />
+              <button
+                className="btn-icon-action"
+                onClick={() => navigator.clipboard.writeText(location.href)}
+              >
+                <img
+                  className="ikonky-action"
+                  src="/assets/share.svg"
+                  alt="sdílení"
+                  title="zkopírovat URL adresu"
+                />
               </button>
             </div>
             <h2>{seznam.nazev}</h2>
