@@ -76,7 +76,10 @@ export const List = (props) => {
                 />
               </button>
             </div>
-            <h2>{seznam.nazev}</h2>
+            <h2 class="seznam-title">{seznam.nazev}</h2>
+            <p class="instruction">
+              Přidejte položku, množství a označte její kategorii
+            </p>
 
             <ListCategory id={id} />
           </div>

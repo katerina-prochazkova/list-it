@@ -30,14 +30,14 @@ export const NewItemForm = (props) => {
         <input
           className="input"
           type="text"
-          placeholder="  Nová položka"
+          placeholder="Nová položka"
           value={itemName}
           onChange={(event) => setItemName(event.target.value)}
         />
         <input
           className="input"
           type="text"
-          placeholder="  Množství (volitelné)"
+          placeholder="Množství (volitelné)"
           value={itemAmount}
           onChange={(event) => setItemAmount(event.target.value)}
         />
