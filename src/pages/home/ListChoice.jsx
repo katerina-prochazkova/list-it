@@ -104,6 +104,7 @@ const ListChoice = () => {
           type="submit"
           className="create-list"
           disabled={listName === '' || listType === ''}
+          // className={disabled ? "create-list create-list-disabled" : "create-list create-list-active"} OTÁZKA NA FILIPA
         >
           Vytvořit
         </button>
