@@ -34,7 +34,6 @@ export const NewItemForm = (props) => {
           value={itemName}
           onChange={(event) => setItemName(event.target.value)}
         />
-        <br />
         <input
           className="input"
           type="text"
@@ -42,7 +41,7 @@ export const NewItemForm = (props) => {
           value={itemAmount}
           onChange={(event) => setItemAmount(event.target.value)}
         />
-        <br />
+        <button className="btn-add-item" type="submit"></button>
       </div>
       <div className="kategorie-ikonky">
         {props.categories.map((category) => (
@@ -60,7 +59,6 @@ export const NewItemForm = (props) => {
           />
         ))}
       </div>
-      <button className="btn-add-item" type="submit"></button>
     </form>
   );
 };

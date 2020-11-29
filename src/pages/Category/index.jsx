@@ -60,7 +60,7 @@ export const Category = (props) => {
           </button>
           <button
             id="ikn-dlt"
-            className="ikonka-delete"
+            className="ikonka-delete-ktg"
             onClick={() => {
               db.collection('seznamy')
                 .doc(props.listId)
