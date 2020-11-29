@@ -28,7 +28,7 @@ body {
   font-family: 'Jost', sans-serif;
   font-size: 16px;
   background-color: #e9ffdb;
-  min-width: 380px;
+
   height: 100vh;
   margin: 0;
 }
@@ -354,9 +354,8 @@ form .input {
 }
 .btn-icon {
   flex-shrink: 0;
-
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   border: 1px solid white;
   border-radius: 50%;
   outline: none;
@@ -526,6 +525,11 @@ ul {
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .btn-icon {
+    width: 64px;
+    height: 64px;
   }
 }
 
