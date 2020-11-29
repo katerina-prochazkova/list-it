@@ -53,8 +53,6 @@ const ListChoice = () => {
         }
         history.push(`/list/${doc.id}`);
       });
-
-    console.log('list type je nastavený na' + listType);
   };
 
   const handleRadioChange = (e) => {
