@@ -387,8 +387,8 @@ form .input {
   border-radius: 50%;
   font-family: 'Jost', sans-serif;
   position: absolute;
-  /* left: 80%;
-  top: 10%; */
+  left: 75%;
+  top: 18%;
   outline: none;
   cursor: pointer;
   background-image: url('img/plus.svg');
