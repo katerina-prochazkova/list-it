@@ -2,7 +2,9 @@
 
 COLOURS:
 background green: #e9ffdb
+  nebo  rgb(233, 255, 219)
 light green: #dbf9b8
+
 
 green: #006613
 pink/red: #ff5f55
@@ -33,7 +35,7 @@ body {
 
 /* HEADER */
 header {
-  height: 10%;
+  height: 50px;
 }
 
 .nav-btn {
@@ -61,20 +63,22 @@ header {
 
 /* MAIN */
 main {
-  height: 80%;
   margin: 0;
   margin-top: 0;
+  border: 3px solid red;
+  flex-grow: 1;
+  position: relative;
 }
 h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 38px;
   text-align: center;
   color: #006613;
-  margin: 30px 0;
+  margin: 50px 0;
 }
 
 p {
-  margin: 30px;
+  margin: 50px;
   font-size: 18px;
 }
 .new-list {
@@ -115,36 +119,53 @@ p {
   padding: 12px 28px;
   border-radius: 30px;
 }
+
+.new-list--form {
+  align-self: stretch;
+  margin: 50px;
+  position: relative;
+}
 .new-list--intro {
-  color: grey;
+  color: black;
+  font-size: 18px;
+  margin: 25px;
 }
 .new-list--type {
   list-style-type: none;
+  font-size: 18px;
+  margin: 5px;
+  margin-left: 3px;
 }
 
 .new-list--name {
+  width: 250px;
   border: none;
   border-bottom: 1px solid #006613;
   font-family: 'Jost', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   background-color: inherit;
-  margin: 25px 20px 0 0;
+  margin: 25px 0 0 0;
   padding-bottom: 10px;
   outline: none;
+}
+.new-list--name::placeholder {
+  color: black;
 }
 
 .create-list {
   border: none;
   color: white;
   background-color: #f82f36;
-
   font-family: 'Jost', sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
-  padding: 10px 22px;
+  padding: 10px 30px;
   border-radius: 30px;
   cursor: pointer;
   outline: none;
+  position: absolute;
+  top: 85%;
+  left: 70%;
 }
 
 .create-list:hover {
@@ -160,7 +181,8 @@ p {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin: 35px 0;
+  margin: 35px;
+  /* position: absolute; */
 }
 
 .about {
@@ -182,28 +204,53 @@ p {
 
 /*FOOTER*/
 footer {
-  height: 5%;
-  text-align: center;
+  width: 100%;
+  height: 50px;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 50px;
+  color: white;
 }
 
 /* -----STŘEDNÍ ROZLIŠENÍ od 720px -----*/
 
 @media screen and (min-width: 720px) {
+  body {
+    background-image: url('img/background-pics/woods.jpg');
+  }
+
+  .body-shop {
+    background-image: url('img/background-pics/gifts.jpg');
+  }
+  .body-travel {
+    background-image: url('img/background-pics/woods.jpg');
+  }
+  .body-wish {
+    background-image: url('img/background-pics/gifts.jpg');
+  }
+
+  .app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   /* HEADER */
   header {
-    display: block;
     width: 100%;
+    height: 50px;
     margin-left: auto;
     margin-right: auto;
+    background-color: white;
   }
 
   .navigation-container {
+    height: 50px;
     display: flex;
     flex-direction: row;
-    background-color: #ffffff;
     justify-content: center;
-    height: 70px;
     align-items: center;
+    border: 3px solid red;
   }
   .nav-btn {
     display: none;
@@ -226,10 +273,17 @@ footer {
     padding: 8px;
   }
   /*MAIN*/
+
   main {
     width: 50%;
+    max-width: 650px;
+    height: auto;
+    margin: 50px auto 0px;
     margin-left: auto;
-    margin-right: auto;
+    background-image: linear-gradient(
+      rgba(233, 255, 219, 0.7),
+      rgba(233, 255, 219, 0.7)
+    );
   }
 }
 
@@ -277,7 +331,6 @@ h2 {
   width: 90%;
   display: flex;
   flex-direction: column;
-  position: relative;
   margin: auto;
   padding-left: 30px;
 }
@@ -334,8 +387,8 @@ form .input {
   border-radius: 50%;
   font-family: 'Jost', sans-serif;
   position: absolute;
-  left: 80%;
-  top: 10%;
+  /* left: 80%;
+  top: 10%; */
   outline: none;
   cursor: pointer;
   background-image: url('img/plus.svg');

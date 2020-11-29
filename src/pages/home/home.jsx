@@ -37,15 +37,11 @@ export function Home() {
               className={
                 newList ? 'new-list--button--selected' : 'new-list--button'
               }
-              disabled={newList ? true : false}
-              // PROBRAT
-              // S
-              // FILIPEM
               onClick={() => setNewList(true)}
             >
               {newList ? 'Můj seznam bude...' : 'Chci nový seznam'}
             </button>
-            <div>{newList ? <ListChoice /> : ''}</div>
+            {newList ? <ListChoice /> : ''}
           </div>
           <div className="about-btn">
             <Link to="/about" className="about">
