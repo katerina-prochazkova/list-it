@@ -5,10 +5,11 @@ import { IconButton } from '../IconButton';
 export const NewItemForm = (props) => {
   const [itemName, setItemName] = useState('');
   const [itemAmount, setItemAmount] = useState('');
-  const [activeCategory, setActiveCategory] = useState(null);
+  const [activeCategory, setActiveCategory] = useState(props.default); // sem si pošlu id "ostatní" jako props?
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(activeCategory);
     db.collection('seznamy')
       .doc(props.listId)
       .collection('kategorie')

@@ -5,6 +5,7 @@ import { NewItemForm } from '../NewItemForm/index.jsx';
 
 export const ListCategory = (props) => {
   const [categories, setCategories] = useState([]);
+  const [defaultCategory, setDefaultCategory] = useState(null);
 
   useEffect(() => {
     return db
@@ -20,12 +21,22 @@ export const ListCategory = (props) => {
             return data;
           }),
         );
+
+        const ostatni = querySnapshot.docs.filter((doc) => {
+          return doc.data().nazev === 'ostatní';
+        });
+        console.log(ostatni.id);
+        setDefaultCategory(ostatni.id);
       });
   }, [props.id]);
 
   return (
     <>
-      <NewItemForm listId={props.id} categories={categories} />
+      <NewItemForm
+        listId={props.id}
+        categories={categories}
+        default={defaultCategory}
+      />
       {categories.map((category) => (
         <Category key={category.id} {...category} listId={props.id} />
       ))}
