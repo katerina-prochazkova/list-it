@@ -217,12 +217,14 @@ footer {
     background-image: url('img/background-pics/travel-background2.jpg');
     background-position: top;
     background-size: cover;
+    background-attachment: fixed;
   }
 
   .type-wish {
     background-image: url('img/background-pics/gifts-background.jpg');
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
   }
   /*-------- KONEC POZADÍ ---------*/
 
@@ -346,6 +348,7 @@ form .input {
   background-color: white;
   cursor: pointer;
   margin: 0 5px;
+  padding: 0;
 }
 .btn-icon-action:hover {
   background-color: #fe5f55;
@@ -366,6 +369,7 @@ form .input {
   background-color: #006613;
   cursor: pointer;
   margin: 0 5px;
+  padding: 0;
 }
 .btn-icon--selected {
   background-color: #159f06;
