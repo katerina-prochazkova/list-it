@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { db } from '../../db';
 import { IconButton } from '../IconButton';
 
 export const NewItemForm = (props) => {
   const [itemName, setItemName] = useState('');
   const [itemAmount, setItemAmount] = useState('');
-  const [activeCategory, setActiveCategory] = useState(props.default); // sem si pošlu id "ostatní" jako props?
+  const [activeCategory, setActiveCategory] = useState(null);
+
+  useEffect(() => {
+    if (props.default !== null) {
+      setActiveCategory(props.default);
+    }
+  }, [props.default]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -51,9 +57,7 @@ export const NewItemForm = (props) => {
             {...category}
             selected={category.id === activeCategory}
             onClick={() => {
-              setActiveCategory(
-                category.id === activeCategory ? null : category.id,
-              );
+              setActiveCategory(category.id);
             }}
           />
         ))}

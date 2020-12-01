@@ -21,12 +21,9 @@ export const ListCategory = (props) => {
             return data;
           }),
         );
-        //tohle nefunguje:
-        const ostatni = querySnapshot.docs.filter((doc) => {
-          return doc.data().nazev === 'ostatní';
-        });
-        console.log(ostatni.id);
-        setDefaultCategory(ostatni.id); //
+
+        const ostatniId = querySnapshot.docs[querySnapshot.docs.length - 1].id;
+        setDefaultCategory(ostatniId);
       });
   }, [props.id]);
 
