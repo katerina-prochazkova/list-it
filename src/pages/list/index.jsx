@@ -59,7 +59,7 @@ export const List = (props) => {
               >
                 <img
                   className="ikonky-action"
-                  src="/assets/print.svg"
+                  src="/assets/printgreen.svg"
                   alt="tisk"
                   title="tisk"
                 />
@@ -74,7 +74,7 @@ export const List = (props) => {
               >
                 <img
                   className="ikonky-action"
-                  src="/assets/share.svg"
+                  src="/assets/sharegreen.svg"
                   alt="sdílení"
                   title="zkopírovat URL adresu"
                 />
@@ -83,8 +83,8 @@ export const List = (props) => {
                 <div className="message-copied">URL adresa zkopírována</div>
               ) : null}
             </div>
-            <h2 class="seznam-title">{seznam.nazev}</h2>
-            <p class="instruction">
+            <h2 className="seznam-title">{seznam.nazev}</h2>
+            <p className="instruction">
               Přidejte položku, množství a označte její kategorii
             </p>
 

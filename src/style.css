@@ -137,6 +137,7 @@ p {
   margin: 5px;
   margin-left: 3px;
 }
+
 .new-list--name {
   width: 250px;
   border: none;
@@ -346,16 +347,16 @@ form .input {
   flex-shrink: 0;
   width: 48px;
   height: 48px;
-  border: 1px solid black;
+  border: 1px solid #006613;
   border-radius: 50%;
   outline: none;
-  background-color: white;
+  background-color: transparent;
   cursor: pointer;
   margin: 0 5px;
   padding: 0;
 }
 .btn-icon-action:hover {
-  background-color: #fe5f55;
+  background-color: white;
 }
 .ikonky-action {
   width: 36px;
