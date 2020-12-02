@@ -62,11 +62,15 @@ export const Category = (props) => {
             id="ikn-dlt"
             className="ikonka-delete-ktg"
             onClick={() => {
-              db.collection('seznamy')
-                .doc(props.listId)
-                .collection('kategorie')
-                .doc(props.id)
-                .delete();
+              items.forEach((item) => {
+                db.collection('seznamy')
+                  .doc(props.listId)
+                  .collection('kategorie')
+                  .doc(props.id)
+                  .collection('polozky')
+                  .doc(item.id)
+                  .delete();
+              });
             }}
           ></button>
         </div>
