@@ -64,22 +64,24 @@ h3 {
 .nav-closed {
   display: none;
 }
+.nav-large {
+  display: none;
+}
 .nav-open {
   position: absolute;
-  top: 75px;
-  left: 20px;
+  top: 70px;
+  left: 15px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   background-color: white;
+  z-index: 1;
 }
-.nav-open .nav-polozky {
+.nav-polozky {
   text-decoration: none;
   color: #006613;
   padding: 5px;
   font-weight: 500;
-}
-.nav-large {
-  display: none;
 }
 
 /* ------------------MAIN-------------------- */
@@ -254,11 +256,17 @@ footer {
     background-color: white;
   }
   .navigation-container {
+    position: static;
     height: 60px;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
   .nav-btn {
+    display: none;
+  }
+  .nav-open {
+    position: static;
     display: none;
   }
   .nav-large {
@@ -267,18 +275,16 @@ footer {
     justify-content: space-evenly;
     width: 70%;
   }
-  .nav-open {
-    display: none;
-  }
+
   .nav-polozky {
-    text-decoration: none;
+    font-weight: 400;
     padding: 10px;
-    color: #006613;
   }
   .nav-polozky:hover {
     font-size: 18px;
     font-weight: 600;
     padding: 8px;
+    border: none;
   }
 
   /* ------------------MAIN-------------------- */

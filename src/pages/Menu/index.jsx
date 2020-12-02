@@ -13,7 +13,9 @@ const Menu = () => {
           onClick={() => setMenuOpen(!menuOpen)}
         ></button>
         <h3>List it!</h3>
-        <nav className={menuOpen ? 'nav-open' : 'nav-closed nav-large'}>
+        <nav
+          className={menuOpen ? 'nav-large nav-open' : 'nav-closed nav-large'}
+        >
           <Link to="/" id="home-btn" className="nav-polozky">
             Úvodní stránka
           </Link>
