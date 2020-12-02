@@ -1,25 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 
 export default function About() {
   return (
     <>
-      <header>
-        <div className="navigation-container">
-          <button id="nav-btn" className="nav-btn">
-            {/* hamburger menu */}
-          </button>
-          <h3>List it!</h3>
-          <nav className="nav-closed">
-            <Link to="/" id="home-btn" className="nav-polozky">
-              Úvodní stránka
-            </Link>
-            <Link to="/list/66" id="seznamy-btn" className="nav-polozky">
-              Moje seznamy
-            </Link>
-          </nav>
-        </div>
-      </header>
       <main className="about-main">
         <h1>Jak to funguje</h1>
         <div>

@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import About from '../about/about.jsx';
-import { List } from '../list/index.jsx';
-import { Home } from '../home/home.jsx';
 
 const Menu = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header>
       <div className="navigation-container">
-        <button id="nav-btn" className="nav-btn"></button>
+        <button
+          id="nav-btn"
+          className="nav-btn"
+          onClick={() => setMenuOpen(!menuOpen)}
+        ></button>
         <h3>List it!</h3>
-        <nav className="nav-closed">
+        <nav className={menuOpen ? 'nav-open' : 'nav-closed nav-large'}>
           <Link to="/" id="home-btn" className="nav-polozky">
             Úvodní stránka
           </Link>

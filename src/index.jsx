@@ -19,7 +19,7 @@ const App = () => {
   return (
     <>
       <Router>
-        {/* <Menu /> */}
+        <Menu />
         <Switch>
           {routes.map((route) => (
             <Route {...route} key={route.path} />
