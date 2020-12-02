@@ -17,6 +17,7 @@ export const Category = (props) => {
       .collection('kategorie')
       .doc(props.id)
       .collection('polozky')
+      .orderBy('datumVytvoreni', 'desc')
       .onSnapshot((querySnapshot) => {
         setItems(
           querySnapshot.docs.map((doc) => {

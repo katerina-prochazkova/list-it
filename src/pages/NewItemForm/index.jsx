@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { db } from '../../db';
+import firebase from 'firebase/app';
 import { IconButton } from '../IconButton';
 
 export const NewItemForm = (props) => {
@@ -25,7 +26,7 @@ export const NewItemForm = (props) => {
         nazev: itemName,
         mnozstvi: itemAmount,
         koupeno: false,
-        // datumVytvoreni: firebase.firestore.FieldValue.serverTimestamp(),
+        datumVytvoreni: firebase.firestore.FieldValue.serverTimestamp(),
       });
     setItemName('');
     setItemAmount('');
