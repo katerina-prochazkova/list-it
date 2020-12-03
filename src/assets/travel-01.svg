@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 60 60">
+  <g fill="none" fill-rule="evenodd" transform="translate(3 7)">
+    <path fill="#4A8F9E" fill-rule="nonzero" d="M34,4 L34,9 C34,10.1045695 34.8954305,11 36,11 C37.1045695,11 38,10.1045695 38,9 L38,2 C38,0.8954305 37.1045695,0 36,0 L19,0 C17.8954305,0 17,0.8954305 17,2 L17,9 C17,10.1045695 17.8954305,11 19,11 C20.1045695,11 21,10.1045695 21,9 L21,4 L34,4 Z"/>
+    <rect width="54" height="36" y="9" fill="#BDB9FF" stroke="#BDB9FF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="3"/>
+    <rect width="4" height="36" x="8" y="9" fill="#3BABB7" stroke="#3BABB7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <rect width="4" height="36" x="42" y="9" fill="#3BABB7" stroke="#3BABB7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path fill="#FD5A5A" d="M26,33.2040581 L26,27 L18,27 L18,24 L26,22.4 L26,19.0066636 C26,17.8984139 26.8877296,17 28,17 C29.1045695,17 30,17.8964311 30,19.0066636 L30,22.4 L38,24 L38,27 L30,27 L30,33.1640459 L33,34 L33,37 L28.151142,35.651142 L23,37 L23,34 L26,33.2040581 Z" transform="rotate(45 28 27)"/>
+  </g>
+</svg>

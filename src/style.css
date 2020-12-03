@@ -5,7 +5,6 @@ green: #006613
 bright green: #159f06
 pink/red: #ff5f55
   alternative 1: #f82f36  
-  alternative 2: #FF3526
 white: #ffffff
 black: #000000
 
@@ -635,10 +634,41 @@ ul {
 }
 
 /*-------------------ABOUT-------------------*/
+.pg-about-icon {
+  max-width: 90px;
+  margin: 16px;
+}
+.step-one,
+.step-two,
+.step-three {
+  display: flex;
+  flex-direction: column;
+}
+.step-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.plus {
+  background-color: #006613;
+  border-radius: 50%;
+  max-width: 80px;
+}
+.check {
+  background-color: #0075ff;
+  border-radius: 20%;
+  max-width: 80px;
+}
+.delete {
+  background-color: #fe5f55;
+  border-radius: 50%;
+  max-width: 80px;
+}
+
 @media screen and (min-width: 620px) {
   .about-main {
-    width: 50%;
-    max-width: 600px;
+    width: 80%;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
   }
