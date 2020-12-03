@@ -600,6 +600,9 @@ ul {
 
 /* -----LIST ------PRINT -------------*/
 @media print {
+  .nav-btn,
+  .nav-large,
+  .nav-open,
   .form-list,
   .container-icons--action,
   .instruction,

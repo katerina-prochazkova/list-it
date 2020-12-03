@@ -35,9 +35,8 @@ export default function About() {
             <div className="step-two">
               <p>
                 2. Přidejte do seznamu položky. Jednotlivým položkám můžete
-                přidávat i kategorie pro přehlednější zobrazení. <br />
-                Položky můžete označit jako již vyřešené, nebo je odstranit
-                úplně.
+                přidávat i kategorie pro přehlednější zobrazení. Položky můžete
+                označit jako již vyřešené, nebo je odstranit úplně.
               </p>
               <div className="step-icons">
                 <img
@@ -61,9 +60,9 @@ export default function About() {
               <p>
                 {' '}
                 3. Pošlete odkaz na seznam rodině či přátelům pomocí svého
-                oblíbeného komunikačního kanálu. <br />
-                Odkaz na seznam si nejlépe uložte do záložek pro snadný opětovný
-                přístup. <br /> Seznam si také můžete snadno vytisknout.
+                oblíbeného komunikačního kanálu. Odkaz na seznam si nejlépe
+                uložte do záložek pro snadný opětovný přístup. Seznam si také
+                můžete snadno vytisknout.
               </p>
               <div className="step-icons">
                 <img
