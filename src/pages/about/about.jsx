@@ -13,7 +13,7 @@ export default function About() {
           </p>
           <div className="step-by-step">
             <div className="step-one">
-              <p>1. Vyberte seznam podle účelu</p>
+              <p>1. Vyberte seznam podle účelu.</p>
               <div className="step-icons">
                 <img
                   className="pg-about-icon"
@@ -68,7 +68,7 @@ export default function About() {
               <div className="step-icons">
                 <img
                   className="pg-about-icon"
-                  src="/assets/ms-icon-150x150.png"
+                  src="/assets/list.svg"
                   alt="list"
                 />
               </div>
