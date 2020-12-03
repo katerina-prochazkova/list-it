@@ -23,6 +23,9 @@ body {
   background-color: #e9ffdb;
   height: 100vh;
   margin: 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 header {
@@ -31,10 +34,19 @@ header {
   margin-left: auto;
   margin-right: auto;
 }
-h3 {
+
+.h3-logo {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  font-family: 'Jost', sans-serif;
   margin: 5px 20px;
   font-size: 24px;
   display: inline-block;
+  text-decoration: none;
+  color: black;
 }
 .navigation-container {
   height: 70px;
@@ -589,8 +601,36 @@ ul {
 
 /* -----LIST ------PRINT -------------*/
 @media print {
-  .form-list {
+  .form-list,
+  .container-icons--action,
+  .instruction,
+  .input-checkbox-ktg,
+  .ikonka-kategorie,
+  .ikonka-delete-ktg,
+  .ikonka-delete {
     display: none;
+  }
+  .seznam-title {
+    margin: 0;
+    border: 2px solid grey;
+  }
+  .kategorie-container {
+    padding: 20px 0;
+    margin-bottom: 0;
+  }
+  .kategorie-list {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .btn-kategorie {
+    text-transform: uppercase;
+  }
+  .list-item {
+    margin: 0;
+    font-size: 16px;
+    padding-bottom: 4px;
+    padding-left: 50px;
+    height: 35px;
   }
 }
 

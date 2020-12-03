@@ -12,7 +12,9 @@ const Menu = () => {
           className="nav-btn"
           onClick={() => setMenuOpen(!menuOpen)}
         ></button>
-        <h3>List it!</h3>
+        <Link to="/" id="logo-btn" className="h3-logo">
+          List it!
+        </Link>
         <nav
           className={menuOpen ? 'nav-large nav-open' : 'nav-closed nav-large'}
         >
