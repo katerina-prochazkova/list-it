@@ -707,12 +707,10 @@ hr {
 .plus {
   background-color: #006613;
   border-radius: 50%;
-  max-width: 80px;
 }
 .check {
   background-color: white;
   border-radius: 20%;
-  max-width: 80px;
 }
 .delete {
   background-color: #fe5f55;
@@ -769,15 +767,7 @@ hr {
   background-color: transparent;
   width: 46px;
   height: 46px;
-<<<<<<< HEAD
   margin: 8px 10px;
-=======
-  margin: 8px 0px;
-
-  /* padding: 24px; */
-  padding: 0;
-  flex-shrink: 0;
->>>>>>> 34b96e9f2c1099a6aab948d363a952438f741eda
   background-image: url('./img/x-thin.svg');
   background-position: center;
   background-repeat: no-repeat;
