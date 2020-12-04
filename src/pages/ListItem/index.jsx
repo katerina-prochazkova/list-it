@@ -22,10 +22,20 @@ export const ListItem = (props) => {
           type="checkbox"
           onChange={handleChange}
           checked={props.koupeno}
-        />{' '}
-        <div>{props.nazev}</div>
-        <span className="vypln" />
-        <div> {props.mnozstvi}</div>
+        />
+        {props.nazev.length + props.mnozstvi.length < 45 ? (
+          <div className="itemAmountLengthOK">
+            <div>{props.nazev}</div>
+            <span className="vypln" />
+            <div> {props.mnozstvi}</div>
+          </div>
+        ) : (
+          <div className="itemSpanAmount">
+            <div className="LongItemAmount">{props.nazev}</div>
+            <div className="LongItemAmount"> {props.mnozstvi}</div>
+          </div>
+        )}
+
         <button
           id="ikn-dlt"
           className="ikonka-delete"

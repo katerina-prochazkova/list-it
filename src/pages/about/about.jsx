@@ -11,6 +11,8 @@ export default function About() {
             nasdílet, komu potřebujete. Každý, kdo otevře odkaz, bude moci do
             seznamu dále přispívat a upravovat ho.
           </p>
+          <br />
+
           <div className="step-by-step">
             <div className="step-one">
               <p>1. Vyberte seznam podle účelu.</p>
@@ -33,6 +35,7 @@ export default function About() {
               </div>
             </div>
             <div className="step-two">
+              <hr />
               <p>
                 2. Přidejte do seznamu položky. Jednotlivým položkám můžete
                 přidávat i kategorie pro přehlednější zobrazení. Položky můžete
@@ -57,8 +60,8 @@ export default function About() {
               </div>
             </div>
             <div className="step-three">
+              <hr />
               <p>
-                {' '}
                 3. Pošlete odkaz na seznam rodině či přátelům pomocí svého
                 oblíbeného komunikačního kanálu. Odkaz na seznam si nejlépe
                 uložte do záložek pro snadný opětovný přístup. Seznam si také
