@@ -39,6 +39,12 @@ export const ListChoice = () => {
             ikona: 'plate',
             poradi: 0,
           });
+          // } else if (listType === 'travel') {
+          //   category.add({
+          //     nazev: 'vybavení',
+          //     ikona: 'camera',
+          //     poradi: 5,
+          //   });
         } else if (listType === 'wish') {
           category.add({
             nazev: 'ostatní',
