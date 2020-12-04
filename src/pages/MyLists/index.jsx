@@ -7,7 +7,13 @@ export const MyLists = (props) => {
 
   useEffect(() => {
     return db.collection('seznamy').onSnapshot((querySnapshot) => {
-      setLists(querySnapshot.docs.map((doc) => doc.data()));
+      setLists(
+        querySnapshot.docs.map((doc) => {
+          const data = doc.data();
+          data.id = doc.id;
+          return data;
+        }),
+      );
     });
   }, [props.lists]);
 
@@ -22,12 +28,14 @@ export const MyLists = (props) => {
                 className="my-list--icon_type"
                 src={`/assets/${list.typ}.svg`}
               />
-              {/* <h2 className="">{list.nazev}</h2> */}
               <Link to={`/list/${list.id}`} className="my-list--title">
                 {list.nazev}
               </Link>
-
-              <button id="ikn-dlt" className="my-list--icon_delete"></button>
+              <button
+                id="ikn-dlt"
+                className="my-list--icon_delete"
+                onClick={() => db.collection('seznamy').doc(list.id).delete()}
+              ></button>
             </div>
           );
         })}
