@@ -228,10 +228,20 @@ input[type='radio'] {
   justify-content: center;
   align-items: center;
 }
+@keyframes rotate-btn {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.1);
+  }
+}
 .about-btn:hover {
   background-color: #159f06;
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
+  animation: rotate-btn 0.5s ease-in-out both;
 }
+
 /*--------------FOOTER ------------------*/
 footer {
   width: 100%;
@@ -301,10 +311,13 @@ footer {
     padding: 10px;
   }
   .nav-polozky:hover {
-    font-size: 18px;
+    /* font-size: 18px;
     font-weight: 600;
     padding: 8px;
-    border: none;
+    border: none; */
+    transform: scale(1.2);
+    font-weight: 600;
+    padding: 8px;
   }
 
   /* ------------------MAIN-------------------- */
@@ -740,7 +753,7 @@ hr {
   transform: scale(1.2);
 }
 .my-list--icon_type {
-  margin: 0px 24px;
+  margin: 0;
   max-width: 80px;
   background-color: white;
   padding: 10px;
