@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { db } from '../../db';
 
-const ListChoice = () => {
+export const ListChoice = () => {
   const history = useHistory();
   const [listType, setListType] = useState('');
   const [listName, setListName] = useState('');
@@ -119,5 +119,3 @@ const ListChoice = () => {
     </form>
   );
 };
-
-export default ListChoice;

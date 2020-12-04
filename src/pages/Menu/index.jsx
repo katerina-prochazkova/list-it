@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-const Menu = () => {
+export const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const handleClick = () => setMenuOpen(false);
 
@@ -48,5 +48,3 @@ const Menu = () => {
     </header>
   );
 };
-
-export default Menu;

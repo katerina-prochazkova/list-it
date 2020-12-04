@@ -6,7 +6,7 @@ import './db.js';
 import About from './pages/about/about.jsx';
 import { List } from './pages/list/index.jsx';
 import { Home } from './pages/home/home.jsx';
-import Menu from './pages/Menu/index.jsx';
+import { Menu } from './pages/Menu/index.jsx';
 import { MyLists } from './pages/MyLists/index.jsx';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
