@@ -3,6 +3,7 @@ import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const handleClick = () => setMenuOpen(false);
 
   return (
     <header>
@@ -18,13 +19,28 @@ const Menu = () => {
         <nav
           className={menuOpen ? 'nav-large nav-open' : 'nav-closed nav-large'}
         >
-          <Link to="/" id="home-btn" className="nav-polozky">
+          <Link
+            to="/"
+            id="home-btn"
+            className="nav-polozky"
+            onClick={handleClick}
+          >
             Úvodní stránka
           </Link>
-          <Link to="/list/66" id="seznamy-btn" className="nav-polozky">
+          <Link
+            to="/list/66"
+            id="seznamy-btn"
+            className="nav-polozky"
+            onClick={handleClick}
+          >
             Moje seznamy
           </Link>
-          <Link to="/about" id="app-btn" className="nav-polozky">
+          <Link
+            to="/about"
+            id="app-btn"
+            className="nav-polozky"
+            onClick={handleClick}
+          >
             O aplikaci
           </Link>
         </nav>
