@@ -7,7 +7,13 @@ export const MyLists = (props) => {
 
   useEffect(() => {
     return db.collection('seznamy').onSnapshot((querySnapshot) => {
-      setLists(querySnapshot.docs.map((doc) => doc.data()));
+      setLists(
+        querySnapshot.docs.map((doc) => {
+          const data = doc.data();
+          data.id = doc.id;
+          return data;
+        }),
+      );
     });
   }, [props.lists]);
 

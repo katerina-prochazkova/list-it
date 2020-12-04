@@ -228,10 +228,20 @@ input[type='radio'] {
   justify-content: center;
   align-items: center;
 }
+@keyframes rotate-btn {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.1);
+  }
+}
 .about-btn:hover {
   background-color: #159f06;
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
+  animation: rotate-btn 0.5s ease-in-out both;
 }
+
 /*--------------FOOTER ------------------*/
 footer {
   width: 100%;
