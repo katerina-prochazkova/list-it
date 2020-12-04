@@ -715,7 +715,6 @@ hr {
 .delete {
   background-color: #fe5f55;
   border-radius: 50%;
-  max-width: 80px;
 }
 
 @media screen and (min-width: 620px) {
