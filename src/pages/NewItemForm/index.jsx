@@ -48,7 +48,7 @@ export const NewItemForm = (props) => {
           className="input"
           type="text"
           placeholder="Množství (volitelné)"
-          maxLength="40"
+          maxLength="20"
           value={itemAmount}
           onChange={(event) => setItemAmount(event.target.value)}
         />

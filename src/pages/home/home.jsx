@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import ListChoice from './ListChoice.jsx';
+import { ListChoice } from '../ListChoice/index.jsx';
 
 export function Home() {
   const [newList, setNewList] = useState(false);

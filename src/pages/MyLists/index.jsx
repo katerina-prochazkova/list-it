@@ -19,15 +19,17 @@ export const MyLists = (props) => {
 
   return (
     <main>
-      <h1>Moje seznamy</h1>
+      <h1>Všechny seznamy</h1>
       <div className="seznam-container">
         {lists.map((list) => {
           return (
             <div className="list-line">
-              <img
-                className="my-list--icon_type"
-                src={`/assets/${list.typ}.svg`}
-              />
+              <div className="my-list--icon">
+                <img
+                  className="my-list--icon_type"
+                  src={`/assets/${list.typ}.svg`}
+                />
+              </div>
               <Link to={`/list/${list.id}`} className="my-list--title">
                 {list.nazev}
               </Link>
