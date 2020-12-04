@@ -16,20 +16,21 @@ export const NewItemForm = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(activeCategory);
-    db.collection('seznamy')
-      .doc(props.listId)
-      .collection('kategorie')
-      .doc(activeCategory)
-      .collection('polozky')
-      .add({
-        nazev: itemName,
-        mnozstvi: itemAmount,
-        koupeno: false,
-        datumVytvoreni: firebase.firestore.FieldValue.serverTimestamp(),
-      });
-    setItemName('');
-    setItemAmount('');
+    if (itemName !== '') {
+      db.collection('seznamy')
+        .doc(props.listId)
+        .collection('kategorie')
+        .doc(activeCategory)
+        .collection('polozky')
+        .add({
+          nazev: itemName,
+          mnozstvi: itemAmount,
+          koupeno: false,
+          datumVytvoreni: firebase.firestore.FieldValue.serverTimestamp(),
+        });
+      setItemName('');
+      setItemAmount('');
+    }
   };
 
   return (
