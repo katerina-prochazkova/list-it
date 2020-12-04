@@ -719,34 +719,41 @@ hr {
 .list-line {
   display: flex;
   width: 100%;
-  margin: 30px 10px;
-  padding: 8px 24px;
-
+  margin: 15px 10px;
+  padding: 0 24px;
   justify-content: space-between;
   align-items: center;
   background-color: #f82f36;
+  position: relative;
 }
-
 .my-list--title {
   color: white;
   text-align: center;
   font-size: 24px;
   font-weight: 600;
   margin: 0;
+  padding-left: 80px;
   text-decoration: none;
+  flex-grow: 1;
 }
-
+.my-list--title:hover {
+  transform: scale(1.2);
+}
 .my-list--icon_type {
-  margin: 0px;
-
-  max-width: 46px;
+  margin: 0px 24px;
+  max-width: 80px;
   background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
 }
 .my-list--icon_delete {
   background-color: transparent;
   width: 46px;
   height: 46px;
-  padding: 0;
+  margin: 8px 24px;
+  padding: 24px;
+  /* padding: 0; */
   background-image: url('./img/x-thin.svg');
   background-position: center;
   background-repeat: no-repeat;
