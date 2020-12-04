@@ -9,7 +9,7 @@ const Menu = () => {
       <div className="navigation-container">
         <button
           id="nav-btn"
-          className="nav-btn"
+          className={menuOpen ? 'nav-btn nav-btn-open' : 'nav-btn'}
           onClick={() => setMenuOpen(!menuOpen)}
         ></button>
         <Link to="/" id="logo-btn" className="h3-logo">

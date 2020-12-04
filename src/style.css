@@ -69,8 +69,13 @@ header {
   background-color: #e9ffdb;
 }
 .nav-btn:hover {
-  background-color: #dbf9b8;
+  /* background-color: #006613;
+  background-image: url('./img/hamburger-white.svg'); */
+  background-color: white;
   transform: scale(1.1);
+}
+.nav-btn-open {
+  background-color: white;
 }
 .nav-closed {
   display: none;
@@ -335,7 +340,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 0;
   position: relative;
 }
 .seznam-title {
@@ -347,7 +352,6 @@ footer {
   font-weight: 600;
   color: white;
   background-color: #f82f36;
-  /* border-radius: 30px; */
   text-align: center;
 }
 .instruction {
@@ -363,7 +367,7 @@ form .input {
   font-family: 'Jost', sans-serif;
   width: 85%;
   border: 1px solid #dbf9b8;
-  padding: 4px 10px;
+  padding: 4px 35px 4px 10px;
   outline: none;
 }
 .new-input {
@@ -375,7 +379,6 @@ form .input {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-
   margin: 10px 0;
 }
 .container-icons--action {
@@ -458,10 +461,11 @@ form .input {
   transform: scale(1.1);
 }
 .kategorie-container {
-  width: 90%;
+  width: 100%;
 }
 .kategorie-list {
   margin-top: 30px;
+  padding: 0 8px;
   background-color: #fe5f55;
   display: flex;
   justify-content: space-between;
@@ -548,7 +552,7 @@ form .input {
   transform: scale(1.2);
 }
 ul {
-  margin: 0;
+  margin: 0 8px;
   padding: 0;
   list-style-type: none;
   background-color: #e9ffdb;
@@ -570,13 +574,28 @@ ul {
 }
 
 .list-item {
-  margin: 0 30px;
+  margin: 0;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
+  flex-grow: 1;
   font-family: 'Jost', sans-serif;
   font-size: 18px;
   padding-bottom: 8px;
+}
+.itemSpanAmount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+.itemAmountLengthOK {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-grow: 1;
 }
 
 .item-checked {
@@ -585,13 +604,24 @@ ul {
 
 /*-----LIST --- STŘEDNÍ ROZLIŠENÍ od 620px -----*/
 @media screen and (min-width: 620px) {
+  .seznam-container {
+    padding: 10px 20px;
+  }
+  .kategorie-container {
+    width: 90%;
+  }
+  ul {
+    margin: 0;
+  }
   .list-main {
     width: 80%;
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
   }
-
+  .list-item {
+    margin: 0 30px;
+  }
   .btn-icon {
     width: 64px;
     height: 64px;
@@ -621,7 +651,7 @@ ul {
     margin-bottom: 0;
   }
   .kategorie-list {
-    padding-top: 0;
+    padding: 0;
     margin-top: 0;
   }
   .btn-kategorie {
@@ -638,8 +668,12 @@ ul {
 
 /*-------------------ABOUT-------------------*/
 .pg-about-icon {
-  max-width: 90px;
+  width: 90px;
   margin: 16px;
+}
+hr {
+  border: 1px solid #006613;
+  width: 85%;
 }
 .step-one,
 .step-two,
