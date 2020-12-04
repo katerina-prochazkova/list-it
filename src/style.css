@@ -244,27 +244,31 @@ footer {
 
 /* ------------STŘEDNÍ ROZLIŠENÍ od 620px --------------*/
 @media screen and (min-width: 620px) {
-  body {
+  .body-app {
     background-image: url('img/background-pics/market.jpg');
   }
-
-  /* .type-shop {
-  background-image: url('img/background-pics/');
-} */
-
-  .type-travel {
-    background-image: url('img/background-pics/travel-background2.jpg');
+  .type-shop {
+    background-image: url('img/background-pics/market.jpg');
     background-position: top;
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
   }
-
+  .type-travel {
+    background-image: url('img/background-pics/mountains.jpg');
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
   .type-wish {
     background-image: url('img/background-pics/gifts-background.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
   }
+
   /*-------- KONEC POZADÍ ---------*/
 
   header {
