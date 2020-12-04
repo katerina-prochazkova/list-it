@@ -101,6 +101,7 @@ const ListChoice = () => {
         <input
           type="text"
           placeholder="... a bude se jmenovat"
+          maxLength="30"
           className="new-list--name"
           value={listName}
           onChange={(event) => {
