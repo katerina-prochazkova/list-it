@@ -311,10 +311,13 @@ footer {
     padding: 10px;
   }
   .nav-polozky:hover {
-    font-size: 18px;
+    /* font-size: 18px;
     font-weight: 600;
     padding: 8px;
-    border: none;
+    border: none; */
+    transform: scale(1.2);
+    font-weight: 600;
+    padding: 8px;
   }
 
   /* ------------------MAIN-------------------- */
@@ -750,7 +753,7 @@ hr {
   transform: scale(1.2);
 }
 .my-list--icon_type {
-  margin: 0px 24px;
+  margin: 0;
   max-width: 80px;
   background-color: white;
   padding: 10px;
