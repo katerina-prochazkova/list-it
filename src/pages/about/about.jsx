@@ -17,17 +17,17 @@ export default function About() {
               <div className="step-icons">
                 <img
                   className="pg-about-icon"
-                  src="/assets/shopping-02.svg"
+                  src="/assets/shop.svg"
                   alt="shopping"
                 />
                 <img
                   className="pg-about-icon"
-                  src="/assets/travel-01.svg"
+                  src="/assets/travel.svg"
                   alt="travel"
                 />
                 <img
                   className="pg-about-icon"
-                  src="/assets/wish-04.svg"
+                  src="/assets/wish.svg"
                   alt="wish"
                 />
               </div>

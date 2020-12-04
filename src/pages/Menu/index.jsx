@@ -28,7 +28,7 @@ const Menu = () => {
             Úvodní stránka
           </Link>
           <Link
-            to="/list/66"
+            to="/MyLists"
             id="seznamy-btn"
             className="nav-polozky"
             onClick={handleClick}
