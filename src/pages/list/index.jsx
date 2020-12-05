@@ -72,7 +72,7 @@ export const List = (props) => {
               Přidejte položku, množství a označte její kategorii
             </p>
 
-            <ListCategory id={id} />
+            <ListCategory id={id} type={seznam.typ} />
           </div>
         </main>
       )}

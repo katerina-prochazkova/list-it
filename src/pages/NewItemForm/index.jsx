@@ -39,7 +39,7 @@ export const NewItemForm = (props) => {
         <input
           className="input"
           type="text"
-          placeholder="Nová položka"
+          placeholder={props.listType === 'wish' ? 'Přeji si' : 'Nová položka'}
           maxLength="40"
           value={itemName}
           onChange={(event) => setItemName(event.target.value)}
@@ -47,7 +47,9 @@ export const NewItemForm = (props) => {
         <input
           className="input"
           type="text"
-          placeholder="Množství (volitelné)"
+          placeholder={
+            props.listType === 'wish' ? 'Stručný popis' : 'Množství (volitelné)'
+          }
           maxLength="20"
           value={itemAmount}
           onChange={(event) => setItemAmount(event.target.value)}

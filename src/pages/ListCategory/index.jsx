@@ -33,6 +33,7 @@ export const ListCategory = (props) => {
         listId={props.id}
         categories={categories}
         default={defaultCategory}
+        listType={props.type}
       />
       {categories.map((category) => (
         <Category key={category.id} {...category} listId={props.id} />
