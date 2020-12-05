@@ -33,7 +33,7 @@ export const Menu = () => {
             className="nav-polozky"
             onClick={handleClick}
           >
-            Moje seznamy
+            Všechny seznamy
           </Link>
           <Link
             to="/about"

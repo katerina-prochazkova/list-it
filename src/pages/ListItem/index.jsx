@@ -24,13 +24,13 @@ export const ListItem = (props) => {
           checked={props.koupeno}
         />
         {props.nazev.length + props.mnozstvi.length < 45 ? (
-          <div className="itemAmountLengthOK">
+          <div className="itemSpanAmount">
             <div>{props.nazev}</div>
             <span className="vypln" />
             <div> {props.mnozstvi}</div>
           </div>
         ) : (
-          <div className="itemSpanAmount">
+          <div className="itemAmount">
             <div className="LongItemAmount">{props.nazev}</div>
             <div className="LongItemAmount"> {props.mnozstvi}</div>
           </div>
