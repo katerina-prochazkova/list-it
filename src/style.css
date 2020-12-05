@@ -226,14 +226,6 @@ input[type='radio'] {
 .about-btn:hover {
   background-color: #159f06;
 }
-@keyframes rotate-btn {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg) scale(1.1);
-  }
-}
 
 /*--------------FOOTER ------------------*/
 footer {
@@ -333,8 +325,16 @@ footer {
     padding: 35px 10px;
     margin: 30px -55px 30px auto;
   }
+  @keyframes rotate-btn {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg) scale(1.1);
+    }
+  }
   .about-btn:hover {
-    animation: rotate-btn 1s ease-in-out both;
+    animation: rotate-btn 0.6s ease-in-out both;
   }
 }
 /* -----VELKÉ ROZLIŠENÍ od 992px -----*/

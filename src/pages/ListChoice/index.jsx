@@ -13,7 +13,7 @@ export const ListChoice = () => {
       .add({ nazev: listName, typ: listType })
       .then((doc) => {
         const category = doc.collection('kategorie');
-        if (listType === 'shop' || listType === 'travel') {
+        if (listType === 'shop') {
           category.add({
             nazev: 'ostatní',
             ikona: 'threedots',
@@ -39,12 +39,37 @@ export const ListChoice = () => {
             ikona: 'plate',
             poradi: 0,
           });
-          // } else if (listType === 'travel') {
-          //   category.add({
-          //     nazev: 'vybavení',
-          //     ikona: 'camera',
-          //     poradi: 5,
-          //   });
+        } else if (listType === 'travel') {
+          category.add({
+            nazev: 'ostatní',
+            ikona: 'threedots',
+            poradi: 5,
+          });
+          category.add({
+            nazev: 'vybavení',
+            ikona: 'camera',
+            poradi: 4,
+          });
+          category.add({
+            nazev: 'lékárna',
+            ikona: 'bandaid',
+            poradi: 3,
+          });
+          category.add({
+            nazev: 'drogerie',
+            ikona: 'toiletpaper',
+            poradi: 2,
+          });
+          category.add({
+            nazev: 'nápoje',
+            ikona: 'bottle',
+            poradi: 1,
+          });
+          category.add({
+            nazev: 'jídlo',
+            ikona: 'plate',
+            poradi: 0,
+          });
         } else if (listType === 'wish') {
           category.add({
             nazev: 'ostatní',
