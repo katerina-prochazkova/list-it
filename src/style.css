@@ -553,7 +553,7 @@ form .input {
   background-color: transparent;
   width: 33px;
   height: 33px;
-  margin: 10px 10px 0 30px;
+  margin: 0 10px 0 30px;
   padding: 0;
   background-image: url('./img/x-thin.svg');
   background-position: center;
@@ -575,9 +575,7 @@ ul {
 .input-checkbox-item {
   width: 24px;
   height: 24px;
-  margin: 10px;
-  margin-bottom: 0;
-  margin-right: 30px;
+  margin: 0 30px 0 10px;
   flex-shrink: 0;
 }
 .input-checkbox-item:hover {
@@ -588,7 +586,9 @@ ul {
   flex-grow: 1;
   margin: 0 6px 5px 6px;
 }
-
+.item-line {
+  padding-top: 5px;
+}
 .list-item {
   margin: 0;
   display: flex;
@@ -601,19 +601,19 @@ ul {
 }
 .itemSpanAmount {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+/* .itemAmount {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  flex-wrap: wrap;
-  flex-grow: 1;
-}
-.itemAmountLengthOK {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  flex-grow: 1;
-}
-
+  line-height: 1;
+} */
 .item-checked {
   background-color: #dbf9b8;
 }
@@ -743,7 +743,7 @@ hr {
   font-size: 20px;
   font-weight: 600;
   margin: 0;
-  margin-left: 80px;
+  margin-left: 85px;
   text-decoration: none;
   flex-grow: 1;
 }
