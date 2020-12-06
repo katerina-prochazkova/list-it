@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);

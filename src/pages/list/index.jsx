@@ -1,10 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { render } from 'react-dom';
 import { useParams } from 'react-router-dom';
 import { db } from '../../db.js';
 import { ListCategory } from '../ListCategory/index.jsx';
 
-export const List = (props) => {
+export const List = () => {
   const { id } = useParams();
   const [seznam, setSeznam] = useState(null);
   const [urlCopied, setUrlCopied] = useState(false);

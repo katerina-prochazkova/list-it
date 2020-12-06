@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { db } from '../../db';
 
 export const ListItem = (props) => {
@@ -54,6 +54,3 @@ export const ListItem = (props) => {
     </div>
   );
 };
-
-// položka bude props - input.value
-//ikonka bude props
