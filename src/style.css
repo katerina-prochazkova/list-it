@@ -1,15 +1,13 @@
-/* STYLOVÁNÍ
+/* COLORS
 background green: #e9ffdb  nebo  rgb(233, 255, 219)
-light green: #dbf9b8
 green: #006613
 bright green: #159f06
-pink/red: #ff5f55
-  alternative 1: #f82f36  
+pink-red: #ff5f55
+bright red: #f82f36  
 white: #ffffff
 black: #000000
 
-FONTS: 'Jost', sans-serif
-*/
+FONTS: 'Jost', sans-serif */
 
 *,
 *::before,
@@ -26,14 +24,12 @@ body {
   background-attachment: fixed;
   background-position: center;
 }
-
 header {
   width: 100%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
 }
-
 .h3-logo {
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -97,7 +93,6 @@ header {
   padding: 5px;
   font-weight: 500;
 }
-
 /* ------------------MAIN-------------------- */
 .app {
   height: 100%;
@@ -226,7 +221,6 @@ input[type='radio'] {
 .about-btn:hover {
   background-color: #159f06;
 }
-
 /*--------------FOOTER ------------------*/
 footer {
   width: 100%;
@@ -236,7 +230,6 @@ footer {
   padding-right: 50px;
   color: white;
 }
-
 /* ------------STŘEDNÍ ROZLIŠENÍ od 620px --------------*/
 @media screen and (min-width: 620px) {
   .body-app {
@@ -263,9 +256,14 @@ footer {
     background-attachment: fixed;
     background-repeat: no-repeat;
   }
-
+  .type-univ {
+    background-image: url('img/background-pics/univ.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
   /*-------- KONEC POZADÍ ---------*/
-
   header {
     height: 60px;
     background-color: white;
@@ -291,7 +289,6 @@ footer {
     align-items: center;
     width: 70%;
   }
-
   .nav-polozky {
     font-weight: 400;
     padding: 10px;
@@ -299,9 +296,8 @@ footer {
   .nav-polozky:hover {
     transform: scale(1.2);
     font-weight: 600;
-    padding: 8px;
+    padding: 7px;
   }
-
   /* ------------------MAIN-------------------- */
   main {
     width: 80%;
@@ -338,7 +334,7 @@ footer {
     animation: rotate-btn 0.6s ease-in-out both;
   }
 }
-/* -----VELKÉ ROZLIŠENÍ od 992px -----*/
+/* -----------VELKÉ ROZLIŠENÍ od 992px ----------*/
 
 @media screen and (min-width: 992px) {
   main {
@@ -347,7 +343,39 @@ footer {
 }
 
 /*-------------------LIST-------------------*/
-
+.zadny-seznam {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(
+    rgba(233, 255, 219, 0.9),
+    rgba(233, 255, 219, 0.9)
+  );
+  margin: auto auto;
+}
+.h3-home {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin: 5px 20px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 24px;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #fe5f55;
+}
+.h3-home:hover {
+  background-color: #f82f36;
+  transform: scale(1.1);
+}
 .seznam-container {
   display: flex;
   flex-direction: column;
@@ -426,7 +454,6 @@ form .input {
   top: 70px;
   right: 20px;
 }
-
 .btn-icon {
   flex-shrink: 0;
   width: 48px;
@@ -608,19 +635,15 @@ ul {
   align-items: flex-end;
   justify-content: flex-start;
 }
-/* .itemAmount {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  line-height: 1;
-} */
 .item-checked {
   background-color: #dbf9b8;
 }
-
 /*-----LIST --- STŘEDNÍ ROZLIŠENÍ od 620px -----*/
 @media screen and (min-width: 620px) {
+  .zadny-seznam {
+    width: 50%;
+    padding: 50px;
+  }
   .seznam-container {
     padding: 10px 20px;
   }
@@ -645,44 +668,6 @@ ul {
   }
   .container-icons--action {
     margin-right: 0;
-  }
-}
-
-/* -----LIST ------PRINT -------------*/
-@media print {
-  .nav-btn,
-  .nav-large,
-  .nav-open,
-  .form-list,
-  .container-icons--action,
-  .instruction,
-  .input-checkbox-ktg,
-  .ikonka-kategorie,
-  .ikonka-delete-ktg,
-  .ikonka-delete {
-    display: none;
-  }
-  .seznam-title {
-    margin: 0;
-    border: 2px solid grey;
-  }
-  .kategorie-container {
-    padding: 20px 0;
-    margin-bottom: 0;
-  }
-  .kategorie-list {
-    padding: 0;
-    margin-top: 0;
-  }
-  .btn-kategorie {
-    text-transform: uppercase;
-  }
-  .list-item {
-    margin: 0;
-    font-size: 16px;
-    padding-bottom: 4px;
-    padding-left: 50px;
-    height: 35px;
   }
 }
 
@@ -717,7 +702,7 @@ hr {
   background-color: #fe5f55;
   border-radius: 50%;
 }
-
+/*-----ABOUT --- STŘEDNÍ ROZLIŠENÍ od 620px -----*/
 @media screen and (min-width: 620px) {
   .about-main {
     width: 80%;
@@ -779,8 +764,7 @@ hr {
 .my-list--icon_delete:hover {
   transform: scale(1.2);
 }
-/*-----LISTS --- STŘEDNÍ ROZLIŠENÍ od 620px -----*/
-
+/*-----MY LISTS --- STŘEDNÍ ROZLIŠENÍ od 620px -----*/
 @media screen and (min-width: 620px) {
   .my-list--title {
     font-size: 24px;

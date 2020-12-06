@@ -65,7 +65,7 @@ export default function About() {
                 3. Pošlete odkaz na seznam rodině či přátelům pomocí svého
                 oblíbeného komunikačního kanálu. Odkaz na seznam si nejlépe
                 uložte do záložek pro snadný opětovný přístup. Seznam si také
-                můžete snadno vytisknout.
+                můžete snadno stáhnout jako pdf a vytisknout.
               </p>
               <div className="step-icons">
                 <img
