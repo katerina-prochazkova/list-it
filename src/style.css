@@ -256,6 +256,13 @@ footer {
     background-attachment: fixed;
     background-repeat: no-repeat;
   }
+  .type-univ {
+    background-image: url('img/background-pics/univ.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
   /*-------- KONEC POZADÍ ---------*/
   header {
     height: 60px;

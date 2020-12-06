@@ -48,7 +48,7 @@ export const NewItemForm = (props) => {
           className="input"
           type="text"
           placeholder={
-            props.listType === 'wish' ? 'Stručný popis' : 'Množství (volitelné)'
+            props.listType === 'shop' ? 'Množství (volitelné)' : 'Stručný popis'
           }
           maxLength="20"
           value={itemAmount}

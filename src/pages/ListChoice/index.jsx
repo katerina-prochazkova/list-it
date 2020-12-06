@@ -81,6 +81,12 @@ export const ListChoice = () => {
             ikona: 'gift',
             poradi: 0,
           });
+        } else if (listType === 'univ') {
+          category.add({
+            nazev: '',
+            ikona: 'univ-btn',
+            poradi: 1,
+          });
         }
         history.push(`/list/${doc.id}`);
       });
@@ -126,6 +132,18 @@ export const ListChoice = () => {
             value="wish"
           />
           Přání
+        </label>
+      </li>
+      <li className="new-list--type">
+        <label htmlFor="univ">
+          <input
+            type="radio"
+            id="univ"
+            name="list"
+            onChange={handleRadioChange}
+            value="univ"
+          />
+          Univerzální
         </label>
       </li>
       <li className="new-list--type">
