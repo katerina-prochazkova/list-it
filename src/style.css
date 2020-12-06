@@ -372,6 +372,10 @@ footer {
   color: white;
   background-color: #fe5f55;
 }
+.h3-home:hover {
+  background-color: #f82f36;
+  transform: scale(1.1);
+}
 .seznam-container {
   display: flex;
   flex-direction: column;
