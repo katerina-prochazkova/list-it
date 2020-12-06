@@ -130,7 +130,6 @@ export const List = () => {
             <input name="type" value="json" type="hidden" />
             <input name="root" value="json" type="hidden" />
             <input name="data" value={jsonData} type="hidden" />
-            {/* <input type="submit" /> */}
           </form>
         </main>
       )}

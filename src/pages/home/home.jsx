@@ -11,9 +11,9 @@ export function Home() {
         <h1>List it!</h1>
         <div className="content">
           <p>
-            Aplikace List vám usnadní domluvu s rodinou a přáteli. Co je potřeba
-            koupit domů k večeři či zabalit na víkend pod stan? Vytvořte si
-            seznam, ke kterému budou mít přístup ostatní uživatelé a společně
+            Aplikace List it! vám usnadní domluvu s rodinou a přáteli. Co je
+            potřeba koupit domů k večeři či zabalit na víkend pod stan? Vytvořte
+            si seznam, ke kterému budou mít přístup ostatní uživatelé a společně
             sdílejte, co je už koupeno či hotovo a co naopak ještě chybí.
           </p>
           <div className="new-list">
