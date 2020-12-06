@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { db } from '../../db.js';
 import { ListCategory } from '../ListCategory/index.jsx';
 
@@ -65,7 +65,7 @@ export const List = () => {
 
   useEffect(() => {
     const body = document.querySelector('body');
-    if (seznam !== null) {
+    if (seznam != null) {
       body.classList.add(`type-${seznam.typ}`);
       return () => {
         body.classList.remove(`type-${seznam.typ}`);
@@ -75,7 +75,14 @@ export const List = () => {
 
   return (
     <>
-      {seznam === null ? null : (
+      {seznam == null ? (
+        <div class="zadny-seznam">
+          <h1>Je nám líto, ale tento seznam neexistuje.</h1>
+          <Link to="/" className="h3-home">
+            Tady si můžete vytvořit nový
+          </Link>
+        </div>
+      ) : (
         <main className="list-main">
           <div className="seznam-container">
             <div className="container-icons--action">
