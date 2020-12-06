@@ -1,14 +1,59 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { render } from 'react-dom';
 import { useParams } from 'react-router-dom';
 import { db } from '../../db.js';
 import { ListCategory } from '../ListCategory/index.jsx';
-import { NewItemForm } from '../NewItemForm/index.jsx';
 
 export const List = (props) => {
   const { id } = useParams();
   const [seznam, setSeznam] = useState(null);
   const [urlCopied, setUrlCopied] = useState(false);
+  const [jsonData, setJsonData] = useState('');
+  const formRef = useRef();
+
+  const generateJson = () => {
+    const seznamRef = db.collection('seznamy').doc(id);
+    return seznamRef
+      .get()
+      .then((seznamDoc) => {
+        return seznamRef
+          .collection('kategorie')
+          .orderBy('poradi')
+          .get()
+          .then((kategorieRef) => {
+            return {
+              nazev: seznamDoc.data().nazev,
+              kategorie: kategorieRef.docs.map((kategorieDoc) => {
+                return {
+                  nazev: kategorieDoc.data().nazev,
+                  polozkyPromise: kategorieDoc.ref
+                    .collection('polozky')
+                    .orderBy('datumVytvoreni', 'desc')
+                    .get(),
+                };
+              }),
+            };
+          });
+      })
+      .then((data) => {
+        return Promise.all(
+          data.kategorie.map((kategorie) => kategorie.polozkyPromise),
+        ).then((promises) => {
+          const kategorie = data.kategorie.map((kategorie) => {
+            return { nazev: kategorie.nazev };
+          });
+          kategorie.forEach((item, index) => {
+            item.polozky = promises[index].docs.map((polozkaDoc) =>
+              polozkaDoc.data(),
+            );
+          });
+          return {
+            nazev: data.nazev,
+            kategorie: kategorie,
+          };
+        });
+      });
+  };
 
   useEffect(() => {
     return db
@@ -31,21 +76,25 @@ export const List = (props) => {
 
   return (
     <>
-      {/* <p>Id: {id}</p> */}
-
       {seznam === null ? null : (
         <main className="list-main">
           <div className="seznam-container">
             <div className="container-icons--action">
               <button
+                type="submit"
                 className="btn-icon-action"
-                onClick={() => window.print()}
+                onClick={() =>
+                  generateJson().then((jsonData) => {
+                    setJsonData(JSON.stringify(jsonData));
+                    formRef.current.submit();
+                  })
+                }
               >
                 <img
                   className="ikonky-action"
-                  src="/assets/printgreen.svg"
-                  alt="tisk"
-                  title="tisk"
+                  src="/assets/download.svg"
+                  alt="stáhnout"
+                  title="stáhnout"
                 />
               </button>
               <button
@@ -74,6 +123,16 @@ export const List = (props) => {
 
             <ListCategory id={id} type={seznam.typ} />
           </div>
+          <form
+            ref={formRef}
+            method="POST"
+            action="https://pdf.zkusmo.eu/seznam"
+          >
+            <input name="type" value="json" type="hidden" />
+            <input name="root" value="json" type="hidden" />
+            <input name="data" value={jsonData} type="hidden" />
+            {/* <input type="submit" /> */}
+          </form>
         </main>
       )}
     </>
