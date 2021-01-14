@@ -581,7 +581,7 @@ form .input {
   background-color: transparent;
   width: 33px;
   height: 33px;
-  margin: 0 10px 0 30px;
+  margin: 0 10px 0 10px;
   padding: 0;
   background-image: url('./img/x-thin.svg');
   background-position: center;
@@ -603,7 +603,7 @@ ul {
 .input-checkbox-item {
   width: 24px;
   height: 24px;
-  margin: 0 30px 0 10px;
+  margin: 0 10px 0 10px;
   flex-shrink: 0;
 }
 .input-checkbox-item:hover {
@@ -614,8 +614,13 @@ ul {
   flex-grow: 1;
   margin: 0 6px 5px 6px;
 }
-.item-line {
-  padding-top: 5px;
+
+.longItemAmount {
+  display: inline;
+}
+.pomlcka {
+  width: 20px;
+  text-align: center;
 }
 .list-item {
   margin: 0;
@@ -662,10 +667,20 @@ ul {
   .list-item {
     margin: 0 30px;
   }
+  .input-checkbox-item {
+    width: 24px;
+    height: 24px;
+    margin: 0 30px 0 10px;
+    flex-shrink: 0;
+  }
   .btn-icon {
     width: 64px;
     height: 64px;
   }
+  .ikonka-delete {
+    margin: 0 10px 0 30px;
+  }
+
   .container-icons--action {
     margin-right: 0;
   }

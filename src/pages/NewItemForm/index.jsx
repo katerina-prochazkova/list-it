@@ -50,7 +50,7 @@ export const NewItemForm = (props) => {
           placeholder={
             props.listType === 'shop' ? 'Množství (volitelné)' : 'Stručný popis'
           }
-          maxLength="20"
+          maxLength="40"
           value={itemAmount}
           onChange={(event) => setItemAmount(event.target.value)}
         />

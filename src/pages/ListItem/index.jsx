@@ -31,8 +31,9 @@ export const ListItem = (props) => {
           </div>
         ) : (
           <div className="itemAmount">
-            <div className="LongItemAmount">{props.nazev}</div>
-            <div className="LongItemAmount"> {props.mnozstvi}</div>
+            <div className="longItemAmount">{props.nazev}</div>
+            <span className="longItemAmount pomlcka"> — </span>
+            <div className="longItemAmount"> {props.mnozstvi}</div>
           </div>
         )}
 
