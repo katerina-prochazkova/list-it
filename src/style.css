@@ -343,6 +343,29 @@ footer {
 }
 
 /*-------------------LIST-------------------*/
+.container {
+  margin-top: 150px;
+}
+
+.spinner {
+  margin-left: auto;
+  margin-right: auto;
+  border: 26px solid #e9ffdb;
+  border-top: 26px solid #159f06;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .zadny-seznam {
   width: 100%;
   padding: 30px;

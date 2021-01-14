@@ -73,73 +73,75 @@ export const List = () => {
     }
   }, [seznam]);
 
-  return (
-    <>
-      {seznam == null ? (
-        <div class="zadny-seznam">
-          <h1>Je nám líto, ale tento seznam neexistuje.</h1>
-          <Link to="/" className="h3-home">
-            Tady si můžete vytvořit nový
-          </Link>
-        </div>
-      ) : (
-        <main className="list-main">
-          <div className="seznam-container">
-            <div className="container-icons--action">
-              <button
-                type="submit"
-                className="btn-icon-action"
-                onClick={() =>
-                  generateJson().then((jsonData) => {
-                    setJsonData(JSON.stringify(jsonData));
-                    formRef.current.submit();
-                  })
-                }
-              >
-                <img
-                  className="ikonky-action"
-                  src="/assets/download.svg"
-                  alt="stáhnout"
-                  title="stáhnout"
-                />
-              </button>
-              <button
-                className="btn-icon-action"
-                onClick={() => {
-                  navigator.clipboard.writeText(location.href);
-                  setUrlCopied(true);
-                  setTimeout(() => setUrlCopied(false), 4000);
-                }}
-              >
-                <img
-                  className="ikonky-action"
-                  src="/assets/sharegreen.svg"
-                  alt="sdílení"
-                  title="zkopírovat URL adresu"
-                />
-              </button>
-              {urlCopied ? (
-                <div className="message-copied">URL adresa zkopírována</div>
-              ) : null}
-            </div>
-            <h2 className="seznam-title">{seznam.nazev}</h2>
-            <p className="instruction">
-              Přidejte položku, množství a označte její kategorii
-            </p>
-
-            <ListCategory id={id} type={seznam.typ} />
+  if (seznam === undefined) {
+    return (
+      <div class="zadny-seznam">
+        <h1>Je nám líto, ale tento seznam neexistuje.</h1>
+        <Link to="/" className="h3-home">
+          Tady si můžete vytvořit nový
+        </Link>
+      </div>
+    );
+  } else if (seznam === null) {
+    return (
+      <div className="container">
+        <div className="spinner"></div>
+      </div>
+    );
+  } else {
+    return (
+      <main className="list-main">
+        <div className="seznam-container">
+          <div className="container-icons--action">
+            <button
+              type="submit"
+              className="btn-icon-action"
+              onClick={() =>
+                generateJson().then((jsonData) => {
+                  setJsonData(JSON.stringify(jsonData));
+                  formRef.current.submit();
+                })
+              }
+            >
+              <img
+                className="ikonky-action"
+                src="/assets/download.svg"
+                alt="stáhnout"
+                title="stáhnout"
+              />
+            </button>
+            <button
+              className="btn-icon-action"
+              onClick={() => {
+                navigator.clipboard.writeText(location.href);
+                setUrlCopied(true);
+                setTimeout(() => setUrlCopied(false), 4000);
+              }}
+            >
+              <img
+                className="ikonky-action"
+                src="/assets/sharegreen.svg"
+                alt="sdílení"
+                title="zkopírovat URL adresu"
+              />
+            </button>
+            {urlCopied ? (
+              <div className="message-copied">URL adresa zkopírována</div>
+            ) : null}
           </div>
-          <form
-            ref={formRef}
-            method="POST"
-            action="https://pdf.zkusmo.eu/seznam"
-          >
-            <input name="type" value="json" type="hidden" />
-            <input name="root" value="json" type="hidden" />
-            <input name="data" value={jsonData} type="hidden" />
-          </form>
-        </main>
-      )}
-    </>
-  );
+          <h2 className="seznam-title">{seznam.nazev}</h2>
+          <p className="instruction">
+            Přidejte položku, množství a označte její kategorii
+          </p>
+
+          <ListCategory id={id} type={seznam.typ} />
+        </div>
+        <form ref={formRef} method="POST" action="https://pdf.zkusmo.eu/seznam">
+          <input name="type" value="json" type="hidden" />
+          <input name="root" value="json" type="hidden" />
+          <input name="data" value={jsonData} type="hidden" />
+        </form>
+      </main>
+    );
+  }
 };
