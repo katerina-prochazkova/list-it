@@ -116,9 +116,16 @@ export default function List() {
             <button
               className="btn-icon-action"
               onClick={() => {
-                navigator.clipboard.writeText(location.href);
-                setUrlCopied(true);
-                setTimeout(() => setUrlCopied(false), 4000);
+                const { title } = document
+                const url = location.href
+
+                if ('share' in navigator) {
+                  navigator.share({ title, url })
+                } else {
+                  navigator.clipboard.writeText(url);
+                  setUrlCopied(true);
+                  setTimeout(() => setUrlCopied(false), 4000);
+                }
               }}
             >
               <img
