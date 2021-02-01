@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { db } from '../../db';
+import { db } from '../../utils/db';
 import { ListItem } from '../ListItem';
 
 export const Category = (props) => {

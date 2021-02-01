@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link'
 
 export const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,35 +13,40 @@ export const Menu = () => {
           className={menuOpen ? 'nav-btn nav-btn-open' : 'nav-btn'}
           onClick={() => setMenuOpen(!menuOpen)}
         ></button>
-        <Link to="/" id="logo-btn" className="h3-logo">
-          List it!
+        <Link href="/">
+          <a id="logo-btn" className="h3-logo">
+            List it!
+          </a>
         </Link>
         <nav
           className={menuOpen ? 'nav-large nav-open' : 'nav-closed nav-large'}
         >
           <Link
-            to="/"
-            id="home-btn"
-            className="nav-polozky"
-            onClick={handleClick}
+            href="/"
           >
-            Úvodní stránka
+            <a id="home-btn"
+            className="nav-polozky"
+            onClick={handleClick}>
+              Úvodní stránka
+            </a>
           </Link>
           <Link
-            to="/MyLists"
-            id="seznamy-btn"
-            className="nav-polozky"
-            onClick={handleClick}
+            href="/my-lists"
           >
-            Všechny seznamy
+            <a id="seznamy-btn"
+            className="nav-polozky"
+            onClick={handleClick}>
+              Všechny seznamy
+            </a>
           </Link>
           <Link
-            to="/about"
-            id="app-btn"
-            className="nav-polozky"
-            onClick={handleClick}
+            href="/about"
           >
-            O aplikaci
+            <a id="app-btn"
+            className="nav-polozky"
+            onClick={handleClick}>
+              O aplikaci
+            </a>
           </Link>
         </nav>
       </div>

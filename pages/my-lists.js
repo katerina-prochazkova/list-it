@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { db } from '../../db.js';
-import { Link } from 'react-router-dom';
+import { db } from '../utils/db.js';
+import Link from 'next/link';
 
-export const MyLists = (props) => {
+export default function MyLists(props) {
   const [lists, setLists] = useState([]);
 
   useEffect(() => {
@@ -30,8 +30,10 @@ export const MyLists = (props) => {
                   src={`/assets/${list.typ}.svg`}
                 />
               </div>
-              <Link to={`/list/${list.id}`} className="my-list--title">
-                {list.nazev}
+              <Link href={`/list/${list.id}`}>
+                <a className="my-list--title">
+                  {list.nazev}
+                </a>
               </Link>
               <button
                 id="ikn-dlt"

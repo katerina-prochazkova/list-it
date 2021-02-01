@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import { db } from '../../db';
+import { useRouter } from 'next/router'
+import { db } from '../../utils/db';
 
 export const ListChoice = () => {
-  const history = useHistory();
+  const router = useRouter();
   const [listType, setListType] = useState('');
   const [listName, setListName] = useState('');
 
@@ -88,7 +88,7 @@ export const ListChoice = () => {
             poradi: 1,
           });
         }
-        history.push(`/list/${doc.id}`);
+        router.push(`/list/${doc.id}`);
       });
   };
 
