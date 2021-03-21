@@ -17,4 +17,4 @@ if (firebase.apps.length === 0) {
 
 export const db = firebase.firestore();
 
-db.enablePersistence()
+// db.enablePersistence() // Způsobuje problémy
