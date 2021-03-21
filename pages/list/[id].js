@@ -1,10 +1,11 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { db } from '../../db.js';
-import { ListCategory } from '../ListCategory/index.jsx';
+import { useEffect, useState, useRef } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { db } from '../../utils/db.js';
+import { ListCategory } from '../../components/ListCategory/index.jsx';
 
-export const List = () => {
-  const { id } = useParams();
+export default function List() {
+  const { id } = useRouter().query;
   const [seznam, setSeznam] = useState(null);
   const [urlCopied, setUrlCopied] = useState(false);
   const [jsonData, setJsonData] = useState('');
@@ -75,10 +76,12 @@ export const List = () => {
 
   if (seznam === undefined) {
     return (
-      <div class="zadny-seznam">
+      <div className="zadny-seznam">
         <h1>Je nám líto, ale tento seznam neexistuje.</h1>
-        <Link to="/" className="h3-home">
-          Tady si můžete vytvořit nový
+        <Link href="/">
+          <a className="h3-home">
+            Tady si můžete vytvořit nový
+          </a>
         </Link>
       </div>
     );
@@ -113,9 +116,16 @@ export const List = () => {
             <button
               className="btn-icon-action"
               onClick={() => {
-                navigator.clipboard.writeText(location.href);
-                setUrlCopied(true);
-                setTimeout(() => setUrlCopied(false), 4000);
+                const { title } = document
+                const url = location.href
+
+                if ('share' in navigator) {
+                  navigator.share({ title, url })
+                } else {
+                  navigator.clipboard.writeText(url);
+                  setUrlCopied(true);
+                  setTimeout(() => setUrlCopied(false), 4000);
+                }
               }}
             >
               <img

@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ListChoice } from '../ListChoice/index.jsx';
+import { useState } from 'react';
+import Link from 'next/link';
+import { ListChoice } from '../components/ListChoice/index.jsx';
+import { usePWAInstall } from 'react-use-pwa-install';
 
-export function Home() {
+export default function Home() {
   const [newList, setNewList] = useState(false);
+  const install = usePWAInstall();
 
   return (
     <>
@@ -28,8 +30,12 @@ export function Home() {
             {newList ? <ListChoice /> : ''}
           </div>
 
-          <Link to="/about" className="about-btn">
-            O aplikaci
+          {install && <button type="button" onClick={install}>Nainstalovat</button> /* @TODO: dostylovat */}
+
+          <Link href="/about">
+            <a className="about-btn">
+              O aplikaci
+            </a>
           </Link>
         </div>
       </main>

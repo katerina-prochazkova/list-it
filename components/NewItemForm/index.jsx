@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { db } from '../../db';
+import { db } from '../../utils/db';
 import firebase from 'firebase/app';
 import { IconButton } from '../IconButton';
 

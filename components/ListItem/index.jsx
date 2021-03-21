@@ -1,5 +1,5 @@
 import React from 'react';
-import { db } from '../../db';
+import { db } from '../../utils/db';
 
 export const ListItem = (props) => {
   const handleChange = (event) => {

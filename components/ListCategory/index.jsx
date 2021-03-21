@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { db } from '../../db.js';
+import { db } from '../../utils/db.js';
 import { Category } from '../Category/index.jsx';
 import { NewItemForm } from '../NewItemForm/index.jsx';
 

@@ -9,4 +9,19 @@ Seznam s unikátní url adresou můžete nasdílet, komu potřebujete. Každý, 
 
 Webová aplikace List it! je společným dílem Kristiny Petříčkové a Kateřiny Procházkové. Aplikace je závěrečnou prací v rámci Czechitas Digitální akademie Web (pozdim 2020).
 
-![ukázka aplikace](./src/assets/og-screenshot.jpg)
+![ukázka aplikace](./public/assets/og-screenshot.jpg)
+
+## Vývoj
+
+```bash
+npm install
+npm run dev
+```
+
+## Nasazení ([Next.js](https://nextjs.org/docs/deployment))
+
+```bash
+npm install
+npm run build
+npm start
+```
